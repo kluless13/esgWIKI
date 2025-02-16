@@ -9,10 +9,9 @@ from urllib.parse import urlparse, urljoin
 from crawl4ai import AsyncWebCrawler, CrawlerRunConfig, CacheMode
 from dotenv import load_dotenv
 
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config import BASE_URL, CSS_SELECTOR, REQUIRED_KEYS
-from utils.data_utils import save_venues_to_csv
 from utils.scraper_utils import get_browser_config, get_llm_strategy
-from utils.report_utils import extract_report_link
 
 
 load_dotenv()
@@ -152,7 +151,15 @@ async def collect_report_links():
                                             (r'href="([^"]*?climate[^"]*?report[^"]*?\.pdf)"', 'climate-report'),
                                             (r'href="([^"]*?environmental[^"]*?report[^"]*?\.pdf)"', 'environmental-report'),
                                             (r'href="([^"]*?carbon[^"]*?disclosure[^"]*?\.pdf)"', 'carbon-disclosure'),
-                                            (r'href="([^"]*?emissions[^"]*?report[^"]*?\.pdf)"', 'emissions-report')
+                                            (r'href="([^"]*?emissions[^"]*?report[^"]*?\.pdf)"', 'emissions-report'),
+                                            
+                                            # Additional patterns
+                                            (r'href="([^"]*?annual[^"]*?report[^"]*?\.pdf)"', 'annual-report'),
+                                            (r'href="([^"]*?integrated[^"]*?report[^"]*?\.pdf)"', 'integrated-report'),
+                                            (r'href="([^"]*?tcfd[^"]*?report[^"]*?\.pdf)"', 'tcfd-report'),
+                                            (r'href="([^"]*?social[^"]*?report[^"]*?\.pdf)"', 'social-report'),
+                                            (r'href="([^"]*?governance[^"]*?report[^"]*?\.pdf)"', 'governance-report'),
+                                            (r'href="([^"]*?responsibility[^"]*?report[^"]*?\.pdf)"', 'responsibility-report')
                                         ]
                                         
                                         for pattern, report_type in sustainability_pdf_patterns:
