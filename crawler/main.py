@@ -33,14 +33,14 @@ async def collect_report_links():
     """
     Reads company URLs from companies-list.csv, collects sustainability reports and related data.
     """
-    report_data = []  # Store both report links and additional sustainability data
+    report_data = []
     browser_config = get_browser_config()
     
     if not os.path.exists("companies-list.csv"):
         print("Error: companies-list.csv not found!")
         return
 
-    # First read all company URLs
+    # Read all company URLs
     company_urls = []
     with open("companies-list.csv", "r", encoding='utf-8') as f:
         reader = csv.DictReader(f)
@@ -53,156 +53,18 @@ async def collect_report_links():
         return
 
     async with AsyncWebCrawler(config=browser_config) as crawler:
-        # Process all company URLs
-        for company_url, company_name in company_urls:
-            print(f"\nProcessing company URL: {company_url}")
-            company_data = {
-                'company_url': company_url,
-                'company_name': company_name,
-                'sustainability_pages': [],
-                'sustainability_reports': []
-            }
-            
-            try:
-                # Load the company page
-                result = await crawler.arun(
-                    url=company_url,
-                    config=CrawlerRunConfig(
-                        cache_mode=CacheMode.BYPASS,
-                        wait_until='networkidle',
-                        page_timeout=120000  # Increased timeout to 120 seconds
-                    )
-                )
-                
-                if not result.success:
-                    print(f"Failed to load URL: {company_url}")
-                    continue
-                
-                # Find Corporate Governance link in Company Resources section
-                governance_pattern = r'<h2>Company Resources</h2>.*?<a[^>]*?href="([^"]*?)"[^>]*?>Corporate Governance</a>'
-                governance_match = re.search(governance_pattern, result.cleaned_html, re.DOTALL)
-                
-                if not governance_match:
-                    print("No Corporate Governance link found in Company Resources section")
-                    continue
-                    
-                governance_url = governance_match.group(1)
-                print(f"Found corporate governance URL: {governance_url}")
-                company_data['governance_url'] = governance_url
-                
-                # Extract base company URL
-                parsed_url = urlparse(governance_url)
-                base_url = f"{parsed_url.scheme}://{parsed_url.netloc}"
-                print(f"Company base URL: {base_url}")
-                company_data['base_url'] = base_url
-                
-                # Load the governance page
-                try:
-                    gov_result = await crawler.arun(
-                        url=governance_url,
-                        config=CrawlerRunConfig(
-                            cache_mode=CacheMode.BYPASS,
-                            wait_until='networkidle',
-                            page_timeout=120000  # Increased timeout to 120 seconds
-                        )
-                    )
-                    
-                    if not gov_result.success:
-                        print(f"Failed to load governance URL: {governance_url}")
-                        continue
-                    
-                    # Core sustainability section patterns
-                    sustainability_section_patterns = [
-                        (r'href="([^"]*?/sustainability[^"]*?)"', 'sustainability'),
-                        (r'href="([^"]*?/esg[^"]*?)"', 'esg'),
-                        (r'href="([^"]*?/environment[^"]*?)"', 'environment'),
-                        (r'href="([^"]*?/climate[^"]*?)"', 'climate')
-                    ]
-                    
-                    for pattern, section_type in sustainability_section_patterns:
-                        matches = re.finditer(pattern, gov_result.cleaned_html, re.IGNORECASE)
-                        for match in matches:
-                            section_url = match.group(1)
-                            if not section_url.startswith('http'):
-                                section_url = urljoin(base_url, section_url)
-                            if section_url not in [p['url'] for p in company_data['sustainability_pages']]:
-                                print(f"Found {section_type} section: {section_url}")
-                                company_data['sustainability_pages'].append({
-                                    'url': section_url,
-                                    'type': section_type
-                                })
-                                
-                                # Load each sustainability section
-                                try:
-                                    sus_result = await crawler.arun(
-                                        url=section_url,
-                                        config=CrawlerRunConfig(
-                                            cache_mode=CacheMode.BYPASS,
-                                            wait_until='networkidle',
-                                            page_timeout=120000  # Increased timeout to 120 seconds
-                                        )
-                                    )
-                                    
-                                    if sus_result.success:
-                                        # Core sustainability report patterns
-                                        sustainability_pdf_patterns = [
-                                            (r'href="([^"]*?sustainability[^"]*?report[^"]*?\.pdf)"', 'sustainability-report'),
-                                            (r'href="([^"]*?esg[^"]*?report[^"]*?\.pdf)"', 'esg-report'),
-                                            (r'href="([^"]*?climate[^"]*?report[^"]*?\.pdf)"', 'climate-report'),
-                                            (r'href="([^"]*?environmental[^"]*?report[^"]*?\.pdf)"', 'environmental-report'),
-                                            (r'href="([^"]*?carbon[^"]*?disclosure[^"]*?\.pdf)"', 'carbon-disclosure'),
-                                            (r'href="([^"]*?emissions[^"]*?report[^"]*?\.pdf)"', 'emissions-report'),
-                                            
-                                            # Additional patterns
-                                            (r'href="([^"]*?annual[^"]*?report[^"]*?\.pdf)"', 'annual-report'),
-                                            (r'href="([^"]*?integrated[^"]*?report[^"]*?\.pdf)"', 'integrated-report'),
-                                            (r'href="([^"]*?tcfd[^"]*?report[^"]*?\.pdf)"', 'tcfd-report'),
-                                            (r'href="([^"]*?social[^"]*?report[^"]*?\.pdf)"', 'social-report'),
-                                            (r'href="([^"]*?governance[^"]*?report[^"]*?\.pdf)"', 'governance-report'),
-                                            (r'href="([^"]*?responsibility[^"]*?report[^"]*?\.pdf)"', 'responsibility-report')
-                                        ]
-                                        
-                                        for pattern, report_type in sustainability_pdf_patterns:
-                                            matches = re.finditer(pattern, sus_result.cleaned_html, re.IGNORECASE)
-                                            for match in matches:
-                                                report_url = match.group(1)
-                                                if not report_url.startswith('http'):
-                                                    report_url = urljoin(section_url, report_url)
-                                                
-                                                # Extract year if present in the URL or filename
-                                                year_match = re.search(r'20\d{2}', report_url)
-                                                year = year_match.group(0) if year_match else None
-                                                
-                                                report_data = {
-                                                    'url': report_url,
-                                                    'type': report_type,
-                                                    'year': year,
-                                                    'source_page': section_url,
-                                                    'source_section': section_type
-                                                }
-                                                
-                                                # Check if we already have this report
-                                                if not any(r['url'] == report_url for r in company_data['sustainability_reports']):
-                                                    print(f"Found {report_type} ({year if year else 'year unknown'}): {report_url}")
-                                                    company_data['sustainability_reports'].append(report_data)
-                                                    
-                                except Exception as e:
-                                    print(f"Error accessing sustainability section {section_url}: {str(e)}")
-                                    continue
-                            
-                except Exception as e:
-                    print(f"Error accessing governance page: {str(e)}")
-                    continue
-                    
-            except Exception as e:
-                print(f"Error processing {company_url}: {str(e)}")
-            
-            # Add the company data if we found any sustainability content
-            if company_data['sustainability_pages'] or company_data['sustainability_reports']:
-                report_data.append(company_data)
-            await asyncio.sleep(2)
+        # Process companies concurrently in batches
+        batch_size = 5  # Process 5 companies at a time
+        for i in range(0, len(company_urls), batch_size):
+            batch = company_urls[i:i + batch_size]
+            tasks = [process_company(crawler, url, name) for url, name in batch]
+            batch_results = await asyncio.gather(*tasks, return_exceptions=True)
+            for result in batch_results:
+                if isinstance(result, dict) and (result.get('sustainability_pages') or result.get('sustainability_reports')):
+                    report_data.append(result)
+            await asyncio.sleep(1)  # Reduced delay between batches
 
-    # Save detailed report data to JSON
+    # Save results
     with open("sustainability_data.json", "w") as f:
         json.dump(report_data, f, indent=2)
     print(f"\nCollected data for {len(report_data)} companies and saved to 'sustainability_data.json'")
@@ -235,6 +97,155 @@ async def collect_report_links():
             for report in company['sustainability_reports']:
                 f.write(f"{report['url']}\n")
     print(f"Saved {sum(len(c['sustainability_reports']) for c in report_data)} sustainability report URLs to 'report_link.txt'")
+
+
+async def process_company(crawler, company_url, company_name):
+    """
+    Process a single company's data
+    """
+    print(f"\nProcessing company URL: {company_url}")
+    company_data = {
+        'company_url': company_url,
+        'company_name': company_name,
+        'sustainability_pages': [],
+        'sustainability_reports': []
+    }
+    
+    try:
+        # Load the company page with timeout
+        result = await crawler.arun(
+            url=company_url,
+            config=CrawlerRunConfig(
+                cache_mode=CacheMode.BYPASS,
+                wait_until='networkidle',
+                page_timeout=30000  # Reduced timeout to 30 seconds
+            )
+        )
+        
+        if not result.success:
+            print(f"Failed to load URL: {company_url}")
+            return company_data
+        
+        # Find Corporate Governance link in Company Resources section
+        governance_pattern = r'<h2>Company Resources</h2>.*?<a[^>]*?href="([^"]*?)"[^>]*?>Corporate Governance</a>'
+        governance_match = re.search(governance_pattern, result.cleaned_html, re.DOTALL)
+        
+        if not governance_match:
+            print("No Corporate Governance link found in Company Resources section")
+            return company_data
+            
+        governance_url = governance_match.group(1)
+        print(f"Found corporate governance URL: {governance_url}")
+        company_data['governance_url'] = governance_url
+        
+        # Extract base company URL
+        parsed_url = urlparse(governance_url)
+        base_url = f"{parsed_url.scheme}://{parsed_url.netloc}"
+        print(f"Company base URL: {base_url}")
+        company_data['base_url'] = base_url
+        
+        # Load the governance page
+        try:
+            gov_result = await crawler.arun(
+                url=governance_url,
+                config=CrawlerRunConfig(
+                    cache_mode=CacheMode.BYPASS,
+                    wait_until='networkidle',
+                    page_timeout=120000  # Increased timeout to 120 seconds
+                )
+            )
+            
+            if not gov_result.success:
+                print(f"Failed to load governance URL: {governance_url}")
+                return company_data
+            
+            # Core sustainability section patterns
+            sustainability_section_patterns = [
+                (r'href="([^"]*?/sustainability[^"]*?)"', 'sustainability'),
+                (r'href="([^"]*?/esg[^"]*?)"', 'esg'),
+                (r'href="([^"]*?/environment[^"]*?)"', 'environment'),
+                (r'href="([^"]*?/climate[^"]*?)"', 'climate')
+            ]
+            
+            for pattern, section_type in sustainability_section_patterns:
+                matches = re.finditer(pattern, gov_result.cleaned_html, re.IGNORECASE)
+                for match in matches:
+                    section_url = match.group(1)
+                    if not section_url.startswith('http'):
+                        section_url = urljoin(base_url, section_url)
+                    if section_url not in [p['url'] for p in company_data['sustainability_pages']]:
+                        print(f"Found {section_type} section: {section_url}")
+                        company_data['sustainability_pages'].append({
+                            'url': section_url,
+                            'type': section_type
+                        })
+                        
+                        # Load each sustainability section
+                        try:
+                            sus_result = await crawler.arun(
+                                url=section_url,
+                                config=CrawlerRunConfig(
+                                    cache_mode=CacheMode.BYPASS,
+                                    wait_until='networkidle',
+                                    page_timeout=120000  # Increased timeout to 120 seconds
+                                )
+                            )
+                            
+                            if sus_result.success:
+                                # Core sustainability report patterns
+                                sustainability_pdf_patterns = [
+                                    (r'href="([^"]*?sustainability[^"]*?report[^"]*?\.pdf)"', 'sustainability-report'),
+                                    (r'href="([^"]*?esg[^"]*?report[^"]*?\.pdf)"', 'esg-report'),
+                                    (r'href="([^"]*?climate[^"]*?report[^"]*?\.pdf)"', 'climate-report'),
+                                    (r'href="([^"]*?environmental[^"]*?report[^"]*?\.pdf)"', 'environmental-report'),
+                                    (r'href="([^"]*?carbon[^"]*?disclosure[^"]*?\.pdf)"', 'carbon-disclosure'),
+                                    (r'href="([^"]*?emissions[^"]*?report[^"]*?\.pdf)"', 'emissions-report'),
+                                    
+                                    # Additional patterns
+                                    (r'href="([^"]*?annual[^"]*?report[^"]*?\.pdf)"', 'annual-report'),
+                                    (r'href="([^"]*?integrated[^"]*?report[^"]*?\.pdf)"', 'integrated-report'),
+                                    (r'href="([^"]*?tcfd[^"]*?report[^"]*?\.pdf)"', 'tcfd-report'),
+                                    (r'href="([^"]*?social[^"]*?report[^"]*?\.pdf)"', 'social-report'),
+                                    (r'href="([^"]*?governance[^"]*?report[^"]*?\.pdf)"', 'governance-report'),
+                                    (r'href="([^"]*?responsibility[^"]*?report[^"]*?\.pdf)"', 'responsibility-report')
+                                ]
+                                
+                                for pattern, report_type in sustainability_pdf_patterns:
+                                    matches = re.finditer(pattern, sus_result.cleaned_html, re.IGNORECASE)
+                                    for match in matches:
+                                        report_url = match.group(1)
+                                        if not report_url.startswith('http'):
+                                            report_url = urljoin(section_url, report_url)
+                                        
+                                        # Extract year if present in the URL or filename
+                                        year_match = re.search(r'20\d{2}', report_url)
+                                        year = year_match.group(0) if year_match else None
+                                        
+                                        report_data = {
+                                            'url': report_url,
+                                            'type': report_type,
+                                            'year': year,
+                                            'source_page': section_url,
+                                            'source_section': section_type
+                                        }
+                                        
+                                        # Check if we already have this report
+                                        if not any(r['url'] == report_url for r in company_data['sustainability_reports']):
+                                            print(f"Found {report_type} ({year if year else 'year unknown'}): {report_url}")
+                                            company_data['sustainability_reports'].append(report_data)
+                                            
+                        except Exception as e:
+                            print(f"Error accessing sustainability section {section_url}: {str(e)}")
+                            continue
+                    
+        except Exception as e:
+            print(f"Error accessing governance page: {str(e)}")
+            return company_data
+            
+    except Exception as e:
+        print(f"Error processing {company_url}: {str(e)}")
+    
+    return company_data
 
 
 async def crawl_report_link(crawler, report_url, llm_strategy, session_id, required_keys, seen_companies):
