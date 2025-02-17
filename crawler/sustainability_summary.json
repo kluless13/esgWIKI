@@ -1,0 +1,59 @@
+[
+  {
+    "company_name": "Commonwealth Bank",
+    "company_url": "https://www.listcorp.com/asx/cba/commonwealth-bank",
+    "total_reports": 7,
+    "report_types": {
+      "annual-report": 4,
+      "climate-report": 3
+    },
+    "years_covered": [
+      "2022",
+      "2024"
+    ],
+    "file_types": {
+      "pdf": 7,
+      "excel": 0
+    }
+  },
+  {
+    "company_name": "Bhp Group Limited",
+    "company_url": "https://www.listcorp.com/asx/bhp/bhp-group-limited",
+    "total_reports": 161,
+    "report_types": {
+      "sustainability-report": 38,
+      "annual-report": 60,
+      "esg-data": 5,
+      "environmental-report": 2,
+      "excel-data": 56
+    },
+    "years_covered": [
+      "2022",
+      "2023",
+      "2024"
+    ],
+    "file_types": {
+      "pdf": 100,
+      "excel": 61
+    }
+  },
+  {
+    "company_name": "National Australia Bank Limited",
+    "company_url": "https://www.listcorp.com/asx/nab/national-australia-bank-limited",
+    "total_reports": 30,
+    "report_types": {
+      "climate-report": 3,
+      "annual-report": 24,
+      "sustainability-data": 3
+    },
+    "years_covered": [
+      "2022",
+      "2023",
+      "2024"
+    ],
+    "file_types": {
+      "pdf": 27,
+      "excel": 3
+    }
+  }
+]
