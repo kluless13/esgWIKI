@@ -22,6 +22,91 @@ crawler/
     └── scraper_utils.py   # Utility functions for crawling
 ```
 
+## Step-by-Step Guide to Using the ESG Crawler
+
+### 1. Initial Setup
+
+First, ensure you have all dependencies installed:
+```bash
+cd /Users/kluless/esgWIKI/crawler
+pip install -r requirements.txt
+```
+
+### 2. Environment Setup
+
+Create a `.env` file in the crawler directory with necessary configurations:
+```bash
+cp .env.example .env
+```
+
+Edit the `.env` file with your API keys:
+```
+GROQ_API_KEY=your_groq_api_key_here
+```
+
+### 3. Data Collection
+
+#### 3.1 Test Run (First 3 Companies)
+```bash
+python tests/test_main.py collect
+```
+
+This will:
+- Read the first 3 companies from `companies-list.csv`
+- Crawl their websites
+- Generate:
+  - `sustainability_data.json`
+  - `sustainability_summary.json`
+  - `report_link.txt`
+
+#### 3.2 Full Run (All Companies)
+```bash
+python main.py collect
+```
+
+This will do the same as the test run but for all companies.
+
+### 4. Report Download
+
+To download reports:
+```bash
+python download_reports.py
+```
+
+This will:
+- Read URLs from `report_link.txt`
+- Download files to the `downloads` directory
+- Handle both PDF and Excel files
+- Organize downloads by company
+
+### 5. Processing Excel Files
+
+To process a specific Excel file:
+```bash
+python process_excel_data.py <excel_file> <company_name> <company_code>
+```
+
+Example:
+```bash
+python process_excel_data.py "downloads/2024-sustainability-data-pack.xlsx" "Commonwealth Bank of Australia" "CBA"
+```
+
+This will:
+1. Load the Excel file
+2. Process each relevant sheet (GHG Emissions, Energy, Position)
+3. Extract metrics such as:
+   - Scope 1, 2, and 3 emissions
+   - Renewable energy percentage
+   - Energy consumption data
+   - Net zero commitments
+   - Emission reduction targets
+4. Print the extracted metrics
+
+The script looks for specific sheets and patterns:
+- "GHG Emissions" - for emissions data
+- "Energy" - for energy consumption and renewable energy data
+- "Position" - for strategic targets and commitments
+
 ## Key Features
 
 - Crawls company websites through ListCorp.com
@@ -34,60 +119,6 @@ crawler/
   - Environmental reports
   - Carbon disclosure documents
   - ESG data spreadsheets
-
-## Usage
-
-### Collection Phase
-
-1. For testing (first 3 companies):
-```bash
-python tests/test_main.py collect
-```
-
-2. For full crawl (all companies):
-```bash
-python main.py collect
-```
-
-### Output Files
-
-The crawler generates several output files:
-
-- `sustainability_data.json`: Detailed information about found reports and pages
-- `sustainability_summary.json`: Summary statistics of collected reports
-- `report_link.txt`: List of report URLs (filtered to last 3 years)
-
-## How It Works
-
-1. **Company List Processing**
-   - Reads company information from `companies-list.csv`
-   - Extracts company names and URLs
-
-2. **Initial Crawl**
-   - Visits each company's ListCorp page
-   - Identifies the Corporate Governance section
-
-3. **Deep Crawl**
-   - From the Corporate Governance page, finds:
-     - Sustainability sections
-     - ESG sections
-     - Environmental sections
-     - Climate sections
-
-4. **Document Collection**
-   - Scans all identified sections for:
-     - PDF reports
-     - Excel data files
-   - Collects metadata including:
-     - Document type
-     - Year
-     - Source page
-     - File type
-
-5. **Data Organization**
-   - Filters documents to last 3 years
-   - Categorizes documents by type
-   - Generates summary statistics
 
 ## Configuration
 
