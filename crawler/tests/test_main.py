@@ -110,7 +110,7 @@ def is_url_from_company(url: str, company_base_url: str) -> bool:
 
 async def collect_report_links():
     """
-    Reads all companies from companies-list.csv, collects sustainability reports and related data.
+    Reads first 3 companies from companies-list.csv, collects sustainability reports and related data.
     """
     report_data = []
     browser_config = get_browser_config()
@@ -119,11 +119,13 @@ async def collect_report_links():
         print("Error: companies-list.csv not found!")
         return
 
-    # Read all company URLs
+    # Read first 3 company URLs
     company_urls = []
     with open("companies-list.csv", "r", encoding='utf-8') as f:
         reader = csv.DictReader(f)
-        for row in reader:
+        for i, row in enumerate(reader):
+            if i >= 3:  # Only process first 3 companies
+                break
             if 'Link' in row and row['Link'].strip():
                 name = row.get('Company Name', '').strip()
                 if not name:  # If Company Name is empty, try to extract from Link
@@ -741,7 +743,7 @@ async def analyze_sustainability_reports():
 
 async def main():
     """
-    Main entry point for the crawler
+    Test entry point that processes only the first 3 companies
     """
     if len(sys.argv) < 2:
         print("Please specify a command: collect")
