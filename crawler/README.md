@@ -43,100 +43,162 @@ The crawler uses a two-phase approach:
 
 ```
 crawler/
-├── main.py                 # Main crawler script for all companies
-├── tests/
-│   └── test_main.py       # Test crawler for first 3 companies
-├── config.py              # Configuration settings
-├── requirements.txt       # Python dependencies
-├── companies-list.csv     # List of companies to crawl
-└── utils/
-    └── scraper_utils.py   # Utility functions for crawling
+├── main.py                     # Main crawler script for all companies
+├── download_reports.py         # Downloads reports from collected URLs
+├── process_document.py         # Processes downloaded PDFs
+├── process_excel_data.py       # Extracts data from Excel files
+├── initialize_vector_store.py  # Sets up vector storage for document processing
+├── config.py                   # Configuration settings
+├── requirements.txt           # Python dependencies
+├── companies-list.csv        # List of companies to crawl
+│
+├── output/                   # Production output directory
+│   ├── downloads/           # Downloaded reports
+│   ├── sustainability_data.json
+│   ├── sustainability_summary.json
+│   └── report_link.txt
+│
+├── tests/                   # Test files and test data
+│   ├── test_main.py        # Test crawler (first 3 companies)
+│   ├── test_downloader.py  # Test report downloader
+│   ├── test_excel_download.py
+│   └── test_output/        # Test artifacts directory
+│       ├── downloads/      # Test downloads
+│       ├── sustainability_data.json
+│       ├── sustainability_summary.json
+│       └── report_link.txt
+│
+└── utils/                  # Utility modules
+    ├── scraper_utils.py   # Crawler utility functions
+    ├── download_manager.py # Download handling
+    ├── vector_store.py    # Vector storage utilities
+    ├── db_manager.py      # Database management
+    └── db_setup.py        # Database initialization
+
 ```
 
-## Step-by-Step Guide to Using the ESG Crawler
+## Output Structure
 
-### 1. Initial Setup
+### Production Output (`/output/`)
+- `downloads/`: Downloaded PDF and Excel files
+- `sustainability_data.json`: Detailed data about each company and their reports
+- `sustainability_summary.json`: Summary statistics for each company
+- `report_link.txt`: List of all report URLs found
 
-First, ensure you have all dependencies installed:
-```bash
-cd /Users/kluless/esgWIKI/crawler
-pip install -r requirements.txt
-```
+### Test Output (`/tests/test_output/`)
+- Same structure as production output but for test data
+- Contains results from processing first 3 companies
+- Used for testing and validation
 
-### 2. Environment Setup
+## Current Status and TODOs
 
-Create a `.env` file in the crawler directory with necessary configurations:
+### Implemented Features
+- ✅ Company website crawling
+- ✅ Report URL collection
+- ✅ PDF and Excel file downloading
+- ✅ Company-wise download limiting
+- ✅ Duplicate file detection
+- ✅ Basic error handling
+
+### In Progress
+- 🔄 Excel file processing
+- 🔄 PDF text extraction
+- 🔄 ESG metrics collection
+
+### TODO List
+1. Document Processing
+   - [ ] Implement PDF text extraction pipeline
+   - [ ] Add OCR support for scanned PDFs
+   - [ ] Create structured data from extracted text
+   - [ ] Implement table extraction from PDFs
+
+2. Excel Processing
+   - [ ] Add support for various Excel formats
+   - [ ] Create standardized data extraction
+   - [ ] Handle different sheet structures
+   - [ ] Implement data validation
+
+3. Performance Improvements
+   - [ ] Add parallel processing for downloads
+   - [ ] Implement rate limiting
+   - [ ] Add download resume capability
+   - [ ] Optimize memory usage for large files
+
+4. Error Handling
+   - [ ] Add comprehensive error logging
+   - [ ] Implement retry mechanisms
+   - [ ] Add error recovery for interrupted processes
+   - [ ] Create error reports
+
+5. Testing
+   - [ ] Add unit tests for downloaders
+   - [ ] Add integration tests
+   - [ ] Create test data sets
+   - [ ] Add performance benchmarks
+
+6. Documentation
+   - [ ] Add API documentation
+   - [ ] Create troubleshooting guide
+   - [ ] Add examples for common use cases
+   - [ ] Document configuration options
+
+## Usage Guide
+
+### 1. Environment Setup
+Create a `.env` file in the crawler directory:
 ```bash
 cp .env.example .env
 ```
 
-Edit the `.env` file with your API keys:
+Add your API keys:
 ```
 GROQ_API_KEY=your_groq_api_key_here
 ```
 
-### 3. Data Collection
-
-#### 3.1 Test Run (First 3 Companies)
+### 2. Testing the Pipeline
+1. Run test crawler (first 3 companies):
 ```bash
-python tests/test_main.py collect
+python -m tests.test_main collect
 ```
 
-This will:
-- Read the first 3 companies from `companies-list.csv`
-- Crawl their websites
-- Generate:
-  - `sustainability_data.json`
-  - `sustainability_summary.json`
-  - `report_link.txt`
+2. Test downloading reports:
+```bash
+# Download 10 files per company
+python -m tests.test_downloader 10
+```
 
-#### 3.2 Full Run (All Companies)
+### 3. Production Run
+1. Collect all company reports:
 ```bash
 python main.py collect
 ```
 
-This will do the same as the test run but for all companies.
-
-### 4. Report Download
-
-To download reports:
+2. Download reports:
 ```bash
+# Download 10 files per company
+python download_reports.py 10
+
+# Or download all files
 python download_reports.py
 ```
 
-This will:
-- Read URLs from `report_link.txt`
-- Download files to the `downloads` directory
-- Handle both PDF and Excel files
-- Organize downloads by company
-
-### 5. Processing Excel Files
-
-To process a specific Excel file:
+### 4. Data Processing
+Process Excel files:
 ```bash
 python process_excel_data.py <excel_file> <company_name> <company_code>
 ```
 
 Example:
 ```bash
-python process_excel_data.py "downloads/2024-sustainability-data-pack.xlsx" "Commonwealth Bank of Australia" "CBA"
+python process_excel_data.py "output/downloads/2024-sustainability-data-pack.xlsx" "Commonwealth Bank of Australia" "CBA"
 ```
 
-This will:
-1. Load the Excel file
-2. Process each relevant sheet (GHG Emissions, Energy, Position)
-3. Extract metrics such as:
-   - Scope 1, 2, and 3 emissions
-   - Renewable energy percentage
-   - Energy consumption data
-   - Net zero commitments
-   - Emission reduction targets
-4. Print the extracted metrics
+## Configuration
 
-The script looks for specific sheets and patterns:
-- "GHG Emissions" - for emissions data
-- "Energy" - for energy consumption and renewable energy data
-- "Position" - for strategic targets and commitments
+The crawler can be configured through:
+- `config.py`: Core settings
+- `.env`: API keys and sensitive data
+- Command-line arguments: Runtime options (e.g., download limits)
 
 ## Key Features
 
@@ -150,14 +212,6 @@ The script looks for specific sheets and patterns:
   - Environmental reports
   - Carbon disclosure documents
   - ESG data spreadsheets
-
-## Configuration
-
-The crawler can be configured through `config.py` and environment variables:
-- Browser settings
-- Timeouts
-- Cache settings
-- Required fields for data extraction
 
 ## Dependencies
 
