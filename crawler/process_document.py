@@ -65,8 +65,42 @@ class DocumentProcessor:
             loader = PyPDFLoader(str(file_path))
             pages = loader.load()
             
-            # Combine all pages into one text
-            text = "\n".join(page.page_content for page in pages)
+            # Skip table of contents (first few pages) and find relevant sections
+            metrics_section = ""
+            current_section = ""
+            for i, page in enumerate(pages):
+                # Skip first few pages (table of contents)
+                if i < 3:
+                    continue
+                    
+                content = page.page_content
+                logger.info(f"Processing page {i + 1}")
+                logger.info(f"Page content preview: {content[:200]}")
+                
+                # Look for section headers
+                if "Metrics and targets" in content:
+                    current_section = "metrics"
+                    logger.info("Found metrics section")
+                elif "Performance summary" in content:
+                    current_section = "performance"
+                    logger.info("Found performance section")
+                elif "Sector decarbonisation" in content:
+                    current_section = "decarbonisation"
+                    logger.info("Found decarbonisation section")
+                elif "Environmental finance" in content:
+                    current_section = "finance"
+                    logger.info("Found finance section")
+                    
+                # Collect content from relevant sections
+                if current_section in ["metrics", "performance", "decarbonisation", "finance"]:
+                    metrics_section += content + "\n"
+            
+            # Use the metrics section if found, otherwise use full text
+            text = metrics_section if metrics_section else "\n".join(page.page_content for page in pages[3:])
+            
+            # Debug: Print first 2000 characters of content
+            logger.info("First 2000 characters of processed content:")
+            logger.info(text[:2000])
             
             # Extract metrics using LLM
             logger.info("Extracting metrics using LLM...")
@@ -145,4 +179,18 @@ def process_cba_report():
         logger.error("Failed to process CBA report")
 
 if __name__ == "__main__":
-    process_cba_report() 
+    processor = DocumentProcessor()
+    file_path = "/Users/kluless/esgWIKI/crawler/tests/downloads/2024-climate-report.pdf"
+    metrics = processor.process_pdf(
+        file_path=file_path,
+        company_name="National Australia Bank",
+        company_code="NAB"
+    )
+    
+    if metrics:
+        print("Successfully processed NAB Climate Report")
+        print("Extracted metrics:")
+        for key, value in metrics.items():
+            print(f"{key}: {value}")
+    else:
+        print("Failed to process NAB Climate Report") 

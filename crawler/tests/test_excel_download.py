@@ -1,3 +1,9 @@
+'''
+This script is used to test the Excel download functionality of the BHP website.
+It uses Selenium to navigate to the URL and download the Excel file.
+It then checks if the file was downloaded successfully.
+'''
+
 import os
 import time
 from selenium import webdriver

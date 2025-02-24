@@ -7,6 +7,7 @@ import requests
 import re
 import time
 from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
+from .vector_store import ESGVectorStore
 
 # Initialize Groq client settings
 GROQ_API_KEY = "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"
@@ -20,7 +21,11 @@ class ESGExtractionStrategy(ExtractionStrategy):
         self.temperature = temperature
         self.prompt = prompt
         self.last_request_time = 0
-        self.min_request_interval = 2.0  # Increased to 2 seconds between requests
+        self.min_request_interval = 2.0
+        
+        # Initialize vector store
+        base_dir = os.path.dirname(os.path.dirname(__file__))
+        self.vector_store = ESGVectorStore(base_dir)
         
     @retry(
         stop=stop_after_attempt(5),
@@ -73,30 +78,65 @@ class ESGExtractionStrategy(ExtractionStrategy):
         """Extract relevant context around key metrics"""
         contexts = []
         
-        # Key phrases to look for and their context windows
+        # Enhanced patterns for emissions data in various formats
         metric_patterns = [
-            (r'scope 1[\s\S]{0,300}', "Scope 1 Emissions"),
-            (r'scope 2[\s\S]{0,300}', "Scope 2 Emissions"),
-            (r'scope 3[\s\S]{0,300}', "Scope 3 Emissions"),
-            (r'(?:total|operational)?\s*emissions[\s\S]{0,300}', "Total Emissions"),
-            (r'renewable\s*energy[\s\S]{0,300}', "Renewable Energy"),
-            (r'net\s*zero[\s\S]{0,300}', "Net Zero"),
-            (r'carbon\s*neutral[\s\S]{0,300}', "Carbon Neutral"),
-            (r'emission.*reduction.*target[\s\S]{0,300}', "Emission Reduction"),
-            (r'climate.*investment[\s\S]{0,300}', "Climate Investment"),
-            (r'sustainable\s*finance[\s\S]{0,300}', "Sustainable Finance")
+            # General emissions table pattern with flexible structure
+            (r'(?:Table|TABLE).*?(?:GHG|Greenhouse Gas|Carbon|Emissions).*?\n(?:[^\n]*\n){0,10}?(?:.*?(?:Scope|Total|Energy|Emissions).*?\n){1,15}?(?:.*?(?:End|Total|Sub-?total).*?)?', "Emissions Table"),
+            
+            # Scope emissions with flexible table row formats
+            (r'(?:^|\n|\||\s{2,})(?:[^\n|]*?)?Scope\s*1(?:[^\n|]*?)(?:\||$|\s{2,})(?:[^\n|]*?)(\d[\d,.]*)(?:\s*(?:tCO2-?e|tonnes?\s*CO2-?e|kt|Mt|million\s*tonnes?))', "Scope 1"),
+            (r'(?:^|\n|\||\s{2,})(?:[^\n|]*?)?Scope\s*2(?:[^\n|]*?)(?:\||$|\s{2,})(?:[^\n|]*?)(\d[\d,.]*)(?:\s*(?:tCO2-?e|tonnes?\s*CO2-?e|kt|Mt|million\s*tonnes?))', "Scope 2"),
+            (r'(?:^|\n|\||\s{2,})(?:[^\n|]*?)?Scope\s*3(?:[^\n|]*?)(?:\||$|\s{2,})(?:[^\n|]*?)(\d[\d,.]*)(?:\s*(?:tCO2-?e|tonnes?\s*CO2-?e|kt|Mt|million\s*tonnes?))', "Scope 3"),
+            
+            # Carbon inventory with flexible structure
+            (r'(?:Carbon|GHG|Emissions)\s*(?:inventory|profile|footprint)[\s\S]{0,200}?(?:(?:Scope|Total|Direct|Indirect)[\s\S]{0,100}?(?:\d[\d,.]*\s*(?:tCO2-?e|tonnes?\s*CO2-?e|kt|Mt|million\s*tonnes?))){1,5}', "Carbon Inventory"),
+            
+            # Total emissions with various formats
+            (r'(?:Total|Group|Overall|Gross)\s*(?:GHG|Carbon|Scope)?\s*emissions[^\n]*?(\d[\d,.]*)(?:\s*(?:tCO2-?e|tonnes?\s*CO2-?e|kt|Mt|million\s*tonnes?))', "Total Emissions"),
+            
+            # Energy consumption with flexible units
+            (r'(?:Energy|Electricity)\s*consumption[^\n]*?(\d[\d,.]*)(?:\s*(?:kWh|MWh|GWh|PJ|TJ))', "Energy Consumption"),
+            
+            # Renewable energy metrics
+            (r'(?:Renewable|Clean)\s*energy\s*(?:target|percentage|share)[^\n]*?(\d+(?:\.\d+)?)%', "Renewable Energy"),
+            (r'RE100.*?target.*?(?:source|achieve)\s*100%.*?renewable\s*sources.*?by\s*(\d{4})', "RE100 Target"),
+            
+            # Net zero and reduction targets
+            (r'(?:Net[- ]Zero|Carbon[- ]Neutral)\s*(?:target|commitment|goal)[^\n]*?(?:by\s*)?(\d{4})', "Net Zero Target"),
+            (r'(?:emissions?|carbon)\s*reduction\s*target[^\n]*?(\d+(?:\.\d+)?)%[^\n]*?(?:by\s*)?(\d{4})', "Reduction Target"),
+            
+            # Environmental finance
+            (r'(?:Environmental|Sustainable|Green)\s*finance[^\n]*?\$?\s*(\d+(?:\.\d+)?)\s*(?:billion|million|B|M)', "Environmental Finance"),
+            
+            # Base year and current progress
+            (r'(?:base|reference)\s*year[^\n]*?(\d{4})', "Base Year"),
+            (r'(?:achieved|reduced|decreased)[^\n]*?(\d+(?:\.\d+)?)%[^\n]*?(?:reduction|decrease)', "Current Progress")
         ]
         
         # Find all matches for each pattern
         for pattern, section_name in metric_patterns:
-            matches = re.finditer(pattern, text, re.IGNORECASE)
+            matches = re.finditer(pattern, text, re.IGNORECASE | re.MULTILINE | re.DOTALL)
             for match in matches:
-                # Get the matched text and some context after it
-                context = match.group(0)
-                
-                # Look for numeric values in the context
+                context = match.group(0).strip()
+                # Only include contexts with numeric values
                 if re.search(r'\d', context):
-                    contexts.append(f"\n=== {section_name} ===\n{context.strip()}")
+                    # Clean up the context
+                    context = re.sub(r'\s+', ' ', context)
+                    # Add surrounding lines for better context
+                    lines = text.split('\n')
+                    for i, line in enumerate(lines):
+                        if context in line:
+                            start = max(0, i-4)  # 4 lines before
+                            end = min(len(lines), i+5)  # 4 lines after
+                            # Include table headers if present
+                            header_pattern = r'(?:Table|TABLE).*?(?:GHG|Greenhouse Gas|Carbon|Emissions)'
+                            for j in range(max(0, i-10), i):
+                                if re.search(header_pattern, lines[j]):
+                                    start = j
+                                    break
+                            context = '\n'.join(lines[start:end])
+                            break
+                    contexts.append(f"\n=== {section_name} ===\n{context}")
         
         # If we found any contexts, combine them
         if contexts:
@@ -104,26 +144,30 @@ class ESGExtractionStrategy(ExtractionStrategy):
         return text
 
     def extract(self, text: str, url: str = None, **kwargs) -> str:
-        """
-        Extract ESG metrics from the text using Groq's LLM.
-        """
+        """Extract ESG metrics using both regex patterns and vector store."""
         try:
             # Clean and prepare the text
             cleaned_text = self._clean_text(text)
             
-            # Extract relevant metric contexts
-            metric_contexts = self._extract_metric_contexts(cleaned_text)
+            # Extract relevant metric contexts using regex
+            regex_contexts = self._extract_metric_contexts(cleaned_text)
+            
+            # Get relevant chunks from vector store
+            vector_contexts = self._get_vector_store_contexts(cleaned_text)
+            
+            # Combine contexts
+            all_contexts = self._combine_contexts(regex_contexts, vector_contexts)
             
             # Extract company name from URL if possible
             company_name = self._extract_company_name(url) if url else None
             
-            # Create prompt with context
+            # Create prompt with combined context
             analysis_prompt = f"{self.prompt}\n\n"
             if company_name:
                 analysis_prompt += f"Company: {company_name}\n\n"
-            analysis_prompt += f"Document text:\n{metric_contexts}"
+            analysis_prompt += f"Document text:\n{all_contexts}"
             
-            # Call Groq API
+            # Call Groq API with enhanced context
             headers = {
                 "Authorization": f"Bearer {GROQ_API_KEY}",
                 "Content-Type": "application/json"
@@ -141,7 +185,7 @@ class ESGExtractionStrategy(ExtractionStrategy):
             
             print("Making API call to Groq...")
             print("\nExtracted contexts:")
-            print(metric_contexts[:1000] + "..." if len(metric_contexts) > 1000 else metric_contexts)
+            print(all_contexts[:1000] + "..." if len(all_contexts) > 1000 else all_contexts)
             
             llm_response = self._call_groq_api(payload, headers)
             response_text = llm_response["choices"][0]["message"]["content"]
@@ -302,6 +346,51 @@ class ESGExtractionStrategy(ExtractionStrategy):
             'climate_related_investment': None
         })
 
+    def _get_vector_store_contexts(self, text: str) -> str:
+        """Get relevant contexts from vector store."""
+        contexts = []
+        
+        # Search for emissions data
+        emissions_results = self.vector_store.search_emissions_data(k=3)
+        if emissions_results:
+            contexts.append("\n=== Emissions Data from Vector Store ===\n")
+            contexts.extend(doc.page_content for doc in emissions_results)
+        
+        # Search for targets and commitments
+        target_results = self.vector_store.search_targets_and_commitments(k=2)
+        if target_results:
+            contexts.append("\n=== Targets and Commitments from Vector Store ===\n")
+            contexts.extend(doc.page_content for doc in target_results)
+        
+        # Search for financial metrics
+        financial_results = self.vector_store.search_financial_metrics(k=2)
+        if financial_results:
+            contexts.append("\n=== Financial Metrics from Vector Store ===\n")
+            contexts.extend(doc.page_content for doc in financial_results)
+        
+        return "\n".join(contexts)
+        
+    def _combine_contexts(self, regex_contexts: str, vector_contexts: str) -> str:
+        """Combine and deduplicate contexts from different sources."""
+        # Split contexts into sections
+        regex_sections = regex_contexts.split("\n===")
+        vector_sections = vector_contexts.split("\n===")
+        
+        # Combine unique sections
+        unique_sections = []
+        seen_content = set()
+        
+        for section in regex_sections + vector_sections:
+            # Clean and normalize section content
+            cleaned_section = re.sub(r'\s+', ' ', section).strip()
+            if cleaned_section and cleaned_section not in seen_content:
+                seen_content.add(cleaned_section)
+                unique_sections.append(section)
+        
+        # Reassemble sections
+        combined_text = "\n===".join(unique_sections)
+        return combined_text
+
 def get_browser_config() -> BrowserConfig:
     return BrowserConfig(
         headless=True,
@@ -327,84 +416,46 @@ class ESGMetrics:
     renewable_projects: Optional[List[str]] = None
     
 def get_llm_strategy() -> ESGExtractionStrategy:
-    """Enhanced LLM strategy for extracting ESG metrics"""
-    prompt = """You are an expert at analyzing sustainability, climate, and ESG reports. Your task is to thoroughly read through the document and extract key ESG metrics.
+    """Get the LLM strategy for extracting ESG metrics"""
+    prompt = """
+    You are an expert at analyzing climate and sustainability reports. Your task is to extract specific ESG metrics from the provided text.
+    Focus on finding these key metrics:
+    1. Emissions data (Scope 1, 2, and 3) in tCO2-e or similar units
+    2. Renewable energy targets and current percentage
+    3. Net zero commitment year and interim targets
+    4. Emission reduction targets (percentage and target year)
+    5. Sustainable finance commitments (dollar amounts)
+    6. Climate-related investments
+    7. Carbon neutral certification status
 
-Key Instructions:
-1. Read the entire document carefully
-2. Look for both explicit metrics and calculated values
-3. Pay attention to different measurement units (e.g., tCO2-e, MtCO2-e, ktCO2-e)
-4. Consider both absolute values and intensity metrics
-5. Look for both current performance and future targets
-6. Extract the most recent year's data unless specified otherwise
+    Return the metrics in this JSON format:
+    {
+        "company_name": "string",
+        "year": "YYYY",
+        "scope1_emissions": number,
+        "scope2_emissions": number,
+        "scope3_emissions": number,
+        "emissions_unit": "string",
+        "emissions_base_year": "YYYY",
+        "renewable_energy_percentage": number,
+        "renewable_energy_target": number,
+        "target_year": "YYYY",
+        "emission_reduction_target": number,
+        "emission_reduction_base_year": "YYYY",
+        "current_reduction_percentage": number,
+        "net_zero_commitment_year": "YYYY",
+        "carbon_neutral_certified": boolean,
+        "internal_carbon_price": number,
+        "sustainable_finance_target": number,
+        "climate_related_investment": number
+    }
 
-Focus Areas to Extract:
-
-1. Emissions Data:
-   - Scope 1 emissions (direct)
-   - Scope 2 emissions (indirect from energy)
-   - Scope 3 emissions (value chain)
-   - Look for both location-based and market-based Scope 2
-   - Note any emissions intensity metrics
-   - Check for base year emissions
-
-2. Energy & Renewables:
-   - Current renewable energy usage (%)
-   - Renewable energy targets
-   - Energy consumption data
-   - Energy efficiency metrics
-   - Power purchase agreements (PPAs)
-
-3. Climate Targets:
-   - Emission reduction targets (short, medium, long-term)
-   - Current progress against targets
-   - Net zero commitment year
-   - Science-based targets
-   - Carbon neutral certifications
-
-4. Additional Metrics:
-   - Carbon offsets purchased/retired
-   - Internal carbon price
-   - Green/sustainable financing
-   - Climate-related investments
-   - Physical risk metrics
-
-Return the data in this exact JSON format:
-{
-    "company_name": string,  // Company name from document
-    "year": string,         // Most recent reporting year
-    "scope1_emissions": number or null,  // In tCO2-e
-    "scope2_emissions": number or null,  // In tCO2-e (market-based if available)
-    "scope3_emissions": number or null,  // In tCO2-e
-    "emissions_unit": string or null,    // e.g., "tCO2-e", "ktCO2-e", "MtCO2-e"
-    "emissions_base_year": string or null,  // Base year for targets
-    "renewable_energy_percentage": number or null,  // Current renewable %
-    "renewable_energy_target": number or null,      // Target renewable %
-    "target_year": string or null,                 // Year for renewable target
-    "emission_reduction_target": number or null,    // Reduction target %
-    "emission_reduction_base_year": string or null, // Base year for reduction
-    "current_reduction_percentage": number or null, // Current reduction achieved %
-    "net_zero_commitment_year": string or null,    // Net zero target year
-    "carbon_neutral_certified": boolean or null,   // Current carbon neutral status
-    "internal_carbon_price": number or null,      // Internal carbon price used
-    "sustainable_finance_target": number or null,  // In billions
-    "climate_related_investment": number or null   // In millions
-}
-
-Important Guidelines:
-1. Extract NUMERIC values whenever possible
-2. Convert all percentages to numbers (e.g., "40%" → 40)
-3. Use null for metrics not found
-4. Standardize units (convert kt to t if needed)
-5. Include the unit of measurement in emissions_unit
-6. Look for both absolute values and percentage changes
-7. Pay attention to footnotes and technical appendices
-8. Consider both operational and financed emissions for financial institutions
-9. Only include metrics you are confident about
-10. Return only the JSON object, no other text"""
+    Only include metrics that you find with high confidence. Use null for values you cannot find or are uncertain about.
+    Look for both numerical values and contextual statements that confirm these metrics.
+    """
     
     return ESGExtractionStrategy(
         model="llama-3.3-70b-versatile",
-        temperature=0.1,  # Low temperature for consistent extraction
+        temperature=0.1,  # Lower temperature for more focused extraction
         prompt=prompt
     ) 

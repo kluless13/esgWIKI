@@ -1,5 +1,33 @@
 # ESG Data Crawler
 
+# Instructions
+
+Before running any commands, make sure you're in the project directory:
+```bash
+cd /path/to/esgWIKI/crawler
+```
+
+1. Install Requirements:
+```bash
+python -m pip install -r requirements.txt
+```
+
+2. Run Test Crawler (processes first 3 companies):
+```bash
+# This will create test output files in tests/test_output/
+python -m tests.test_main collect
+```
+
+3. Run Test Downloader:
+```bash
+# This will download files to tests/test_output/downloads/
+python -m tests.test_downloader
+```
+
+All test outputs will be stored in the `tests/test_output/` directory to keep test artifacts separate from production data.
+
+---
+
 This project crawls and collects ESG (Environmental, Social, and Governance) reports from Australian Stock Exchange (ASX) listed companies.
 
 ## Overview

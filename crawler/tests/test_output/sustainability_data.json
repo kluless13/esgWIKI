@@ -1,0 +1,3320 @@
+[
+  {
+    "company_url": "https://www.listcorp.com/asx/cba/commonwealth-bank",
+    "company_name": "Commonwealth Bank",
+    "sustainability_pages": [
+      {
+        "url": "https://www.commbank.com.au/sustainability.html?ei=CB-footer_sustainability",
+        "type": "sustainability"
+      }
+    ],
+    "sustainability_reports": [
+      {
+        "url": "https://www.commbank.com.au/content/dam/commbank-assets/investors/docs/results/fy24/CBA-2024-Climate-Report.pdf",
+        "type": "climate-report",
+        "year": "2024",
+        "source_page": "https://www.commbank.com.au/about-us/investors/annual-reports/climate-report-2024.html",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.commbank.com.au/content/dam/commbank-assets/investors/docs/results/fy24/CBA-2024-Climate-Report-print.pdf",
+        "type": "climate-report",
+        "year": "2024",
+        "source_page": "https://www.commbank.com.au/about-us/investors/annual-reports/climate-report-2024.html",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.commbank.com.au/content/dam/commbank-assets/investors/docs/results/fy24/2024-Annual-Report_spreads.pdf",
+        "type": "annual-report",
+        "year": "2024",
+        "source_page": "https://www.commbank.com.au/about-us/investors/annual-reports/annual-report-2024.html",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.commbank.com.au/content/dam/commbank-assets/investors/docs/results/fy24/CBA-2024-Annual-Report_print.pdf",
+        "type": "annual-report",
+        "year": "2024",
+        "source_page": "https://www.commbank.com.au/about-us/investors/annual-reports/annual-report-2024.html",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.commbank.com.au/content/dam/commbank-assets/investors/docs/CBA_Annual_Review_2024.pdf",
+        "type": "annual-report",
+        "year": "2024",
+        "source_page": "https://www.commbank.com.au/about-us/investors/annual-reports/annual-report-2024.html",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.commbank.com.au/content/dam/commbank-assets/investors/docs/results/fy24/2024-Sustainability-Performance-Metrics-and-Disclosures.xlsx",
+        "type": "sustainability-data",
+        "year": "2024",
+        "source_page": "https://www.commbank.com.au/about-us/investors/annual-reports/annual-report-2024.html",
+        "source_section": "sustainability",
+        "file_type": "excel"
+      },
+      {
+        "url": "https://www.commbank.com.au/content/dam/commbank-assets/investors/docs/results/fy24/CBA-2024-Sustainability-Reporting-pages-20-47-of-the-Annual-Report.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.commbank.com.au/about-us/opportunity-initiatives/performance-reporting.html?ei=reporting_fym",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.commbank.com.au/content/dam/commbank-assets/investors/docs/results/fy24/CBA-Sustainability-Reporting-Appendix-FY24.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.commbank.com.au/about-us/opportunity-initiatives/performance-reporting.html?ei=reporting_fym",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.commbank.com.au/content/dam/commbank-assets/investors/docs/results/fy24/CBA-2024-Annual-Report-Sustainability-performance-metrics.pdf",
+        "type": "annual-report",
+        "year": "2024",
+        "source_page": "https://www.commbank.com.au/about-us/opportunity-initiatives/performance-reporting.html?ei=reporting_fym",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.commbank.com.au/content/dam/commbank-assets/support/docs/CommBank-FY23-RAP-progress-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.commbank.com.au/about-us/opportunity-initiatives/performance-reporting.html?ei=reporting_fym",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.commbank.com.au/content/dam/commbank-assets/about-us/docs/2024-Modern-Slavery-Statement.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.commbank.com.au/about-us/opportunity-initiatives/performance-reporting.html?ei=reporting_fym",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.commbank.com.au/content/dam/commbank-assets/investors/docs/results/fy24/CBA-2024-Corporate-Governance-Statement.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.commbank.com.au/about-us/opportunity-initiatives/performance-reporting.html?ei=reporting_fym",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.commbank.com.au/content/dam/commbank-assets/investors/docs/results/fy23/Corporate-Governance-Statement-2023.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.commbank.com.au/about-us/opportunity-initiatives/performance-reporting.html?ei=reporting_fym",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.commbank.com.au/content/dam/commbank-assets/investors/docs/results/1h25/2025-Half-Year-Sustainability-Performance-Metrics-and-Disclosures.xlsx",
+        "type": "sustainability-data",
+        "year": "2025",
+        "source_page": "https://www.commbank.com.au/about-us/opportunity-initiatives/performance-reporting.html?ei=reporting_fym",
+        "source_section": "sustainability",
+        "file_type": "excel"
+      },
+      {
+        "url": "https://www.commbank.com.au/content/dam/commbank-assets/about-us/docs/Accessibility-and-Inclusion-Strategy-2024-2026.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.commbank.com.au/about-us/opportunity-initiatives/policies-and-practices.html?ei=policies-fym",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.commbank.com.au/content/dam/commbank-assets/support/docs/CommBank-RAP-FY23-25.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.commbank.com.au/about-us/opportunity-initiatives/policies-and-practices.html?ei=policies-fym",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.commbank.com.au/content/dam/commbank-assets/about-us/2024-07/information-security-statement-july-2024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.commbank.com.au/about-us/opportunity-initiatives/policies-and-practices.html?ei=policies-fym",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      }
+    ],
+    "governance_url": "https://www.commbank.com.au/about-us/shareholders/corporate-profile/corporate-governance.html",
+    "base_url": "https://www.commbank.com.au"
+  },
+  {
+    "company_url": "https://www.listcorp.com/asx/bhp/bhp-group-limited",
+    "company_name": "Bhp Group Limited",
+    "sustainability_pages": [
+      {
+        "url": "https://www.bhp.com/investors/annual-reporting",
+        "type": "investor-reports"
+      },
+      {
+        "url": "https://www.bhp.com/investors/annual-reporting/annual-report-2024",
+        "type": "investor-reports"
+      },
+      {
+        "url": "https://www.bhp.com/investors/annual-reporting/economic-contribution-report-2024",
+        "type": "investor-reports"
+      },
+      {
+        "url": "https://www.bhp.com/investors/annual-reporting/past-reports",
+        "type": "investor-reports"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2024/240827_esgstandardsanddatabook2024.xlsx",
+        "type": "investor-reports"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2024/240827_bhpannualreport2024.pdf",
+        "type": "investor-reports"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2024/240827_2024bhpappendix4g.pdf",
+        "type": "investor-reports"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/approach",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/approach/materiality-assessment",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/approach/social-investment",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/approach/sustainability-related-risk-management",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/value-chain-sustainability",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/value-chain-sustainability/uk-modern-slavery-act-statement",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/environment",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/environment/water",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/environment/biodiversity-land",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/climate-change",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/climate-change/our-position",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/climate-change/operational-ghg-emissions",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/climate-change/carbon-offsetting",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/climate-change/value-chain-ghg-emission-reductions",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/climate-change/transition-to-a-net-zero-economy",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/climate-change/physical-climate-related-risk-and-adaptation",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/climate-change/advocacy-on-climate-policy",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/climate-change/equitable-change-and-transition",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/climate-change/climate-transition-action-plan",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/climate-change/climate-and-nature",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/climate-change/capability-and-culture",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/climate-change/our-portfolio-in-a-1-point-5-degree-celsius-scenario",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/communities",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/communities/local-communities",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/communities/economic-contribution",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/indigenous-peoples",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/communities/human-rights",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/communities/bhp-foundation",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/ethics-business-conduct",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/people",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/safety-health",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/safety-health/health",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/safety-health/safety",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/safety-health/sexual-harassment",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/tailings-storage-facilities",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/tailings-storage-facilities/what-are-tailings-storage-facilities",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/tailings-storage-facilities/management",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/communities/bhp-foundation/australia-country-program",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/communities/bhp-foundation/canada-country-program",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/communities/bhp-foundation/chile-country-program",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/sustainability/communities/bhp-foundation/board-governance",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.bhp.com/investors/esg-sustainability",
+        "type": "esg"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/environment/2022/water-stewardship-position-statement-2022.pdf",
+        "type": "environment"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/ourapproach/governance/151202_limitedconstitution.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/ourapproach/governance/bhp---board-governance-document.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/ourapproach/governance/bhp---people-and-remuneration-committee-charter.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/ourapproach/governance/bhp---risk-and-audit-committee-charter.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/ourapproach/governance/bhp---nomination-and-governance-committee-charter.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/ourapproach/governance/bhp---sustainability-committee-charter.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/ourapproach/governance/board-committee-members.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/ourapproach/governance/241004_securitiesdealingspolicy.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/ourapproach/governance/200609_provisionofauditandotherservicesbytheexternalauditorpolicy.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/ourapproach/governance/180306_marketdisclosureandcommunications.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/ourapproach/governance/200722_disclosurecontrolsforallperiodicdisclosuredocuments.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/ourapproach/governance/bhp---policy-on-the-independence-of-directors.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/ourapproach/workwithus/200915_inclusionanddiversityposition.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/ourapproach/governance/240000_climatechangeglobalstandard.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/ourapproach/governance/240000_closureglobalstandard.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/ourapproach/governance/240000_communityglobalstandard.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/ourapproach/governance/240000_environmentglobalstandard.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/ourapproach/governance/240000_healthglobalstandard.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/ourapproach/governance/240000_safetyglobalstandard.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/ourapproach/governance/240000_socialvalueandsustainabilityglobalstandard.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/project/bhp1ip/bhp-com-en/documents/suppliers/211116_minimum-requirements-suppliers.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/ourapproach/operatingwithintegrity/indigenouspeoples/221110_indigenouspeoplespolicystatement_2022.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/media/reports-and-presentations/2023/230804_tsfpolicystatement2023.pdf",
+        "type": "documents"
+      }
+    ],
+    "sustainability_reports": [
+      {
+        "url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2024/240827_sustainabilityreportingorganisationalboundarydefinitionsanddisclaimers.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/investors/annual-reporting",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2024/240827_bhpannualreport2024.pdf",
+        "type": "annual-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/investors/annual-reporting",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2024/240827_bhpeconomiccontributionreport2024.pdf",
+        "type": "annual-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/investors/annual-reporting",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2024/240827_bhpmodernslaverystatement2024.pdf",
+        "type": "annual-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/investors/annual-reporting",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2024/240827_bhpclimatetransitionactionplan2024.pdf",
+        "type": "annual-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/investors/annual-reporting",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2024/240827_bhpscopes12and3emissionscalculationmethodology2024.pdf",
+        "type": "annual-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/investors/annual-reporting",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/media/reports-and-presentations/2024/240827_bhpgistmconformancestatementandpublicdisclosure.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/investors/annual-reporting",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/media/reports-and-presentations/2023/230804_tsfpolicystatement2023.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/investors/annual-reporting",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/environment/2023/cdp-2023-submission-not-graded.pdf",
+        "type": "environmental-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/investors/annual-reporting",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2024/240827_esgstandardsanddatabook2024.xlsx",
+        "type": "esg-data",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/investors/annual-reporting",
+        "source_section": "sustainability",
+        "file_type": "excel"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/project/bhp1ip/bhp-com-en/documents/sustainability/2023/231204_finaljddsreasonableassurancestatement_escondida.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/value-chain-sustainability",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/project/bhp1ip/bhp-com-en/documents/sustainability/2023/231204_finaljddsreasonableassurancestatement_spence.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/value-chain-sustainability",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/project/bhp1ip/bhp-com-en/documents/sustainability/2023/231204_finaljddsreasonableassurancestatement_od.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/value-chain-sustainability",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/project/bhp1ip/bhp-com-en/documents/sustainability/2023/231204_finaljddsreasonableassurancestatement_niw.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/value-chain-sustainability",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/project/bhp1ip/bhp-com-en/documents/sustainability/2023/bhp-copper-mark-assurance-statement---olympic-dam.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/value-chain-sustainability",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/project/bhp1ip/bhp-com-en/documents/sustainability/2023/bhp-icmm-pes-assurance-statement---olympic-dam.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/value-chain-sustainability",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/project/bhp1ip/bhp-com-en/documents/sustainability/2023/bhp-icmm-pes-assurance-statement---nickel-west.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/value-chain-sustainability",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/project/bhp1ip/bhp-com-en/documents/sustainability/2023/bhp-icmm-pes-assurance-statement---waio.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/value-chain-sustainability",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/project/bhp1ip/bhp-com-en/documents/sustainability/2023/bhp-icmm-pes-assurance-statement---bma.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/value-chain-sustainability",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/project/bhp1ip/bhp-com-en/documents/sustainability/2024/bhp-cm-icmm-copper-mark-reasonable-assurance-statement---escondida.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/value-chain-sustainability",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/project/bhp1ip/bhp-com-en/documents/sustainability/2024/bhp-cm-icmm---icmm-limited-assurance-statement---escondida.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/value-chain-sustainability",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/project/bhp1ip/bhp-com-en/documents/sustainability/2024/bhp-cm-icmm-copper-mark-reasonable-assurance-statement---spence.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/value-chain-sustainability",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/project/bhp1ip/bhp-com-en/documents/sustainability/2024/bhp-cm-icmm---icmm-limited-assurance-statement---spence.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/value-chain-sustainability",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2024/240530_bhpcanadaincfy23canadianforcedandchildlabourreport.pdf",
+        "type": "annual-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/value-chain-sustainability/uk-modern-slavery-act-statement",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2023/230822_bhpmodernslaverystatement2023.pdf",
+        "type": "annual-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/value-chain-sustainability/uk-modern-slavery-act-statement",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/copper/olympic-dam/olympic-dam/annual-environment-reports/fy23_annual-environmental-protection-and-management-program-report.pdf",
+        "type": "environmental-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/iron-ore/western-australia-iron-ore/0000/annual-environmental-reports/sea-aer-fy2024.pdf",
+        "type": "environmental-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/annual-epbc-compliance-documents/rep-mac-epbc-compliance-report-1-july-2023-to-30-june-2024-w-attachment.pdf",
+        "type": "annual-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/annual-rehabilitation-reports/annual-rehabilitation-report-2023_2024.pdf",
+        "type": "annual-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/annual-rehabilitation-reports/arr0001119_annual-report_1sep2023-1243pm.pdf",
+        "type": "annual-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/copper/olympic-dam/olympic-dam/annual-environment-reports/fy23_annual-wellfields-report.pdf",
+        "type": "annual-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/copper/prom-hill/ph-9999-sec-rep-5034-prominent-hill-annual-compliance-report-2023_appendices-extracted.pdf",
+        "type": "annual-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/iron-ore/western-australia-iron-ore/0000/newman-water-licence/bhp-waio---newman-wl53-operating-area-annual-drinking-water-report-2023-24.pdf",
+        "type": "annual-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/caval-ridge/2023-caval-ridge-mine-horse-pit-extension-project-preliminary-documentation-epbc-2021-9031/appendix-c-terrestrial-ecology-significant-impact-assessment-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/caval-ridge/2023-caval-ridge-mine-horse-pit-extension-project-preliminary-documentation-epbc-2021-9031/appendix-e1-groundwater-dependent-ecosystems-impact-assessment-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/caval-ridge/2023-caval-ridge-mine-horse-pit-extension-project-preliminary-documentation-epbc-2021-9031/appendix-f-groundwater-impact-assessment-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/caval-ridge/2023-caval-ridge-mine-horse-pit-extension-project-preliminary-documentation-epbc-2021-9031/appendix-g-surface-water-impact-assessment-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/caval-ridge/2023-caval-ridge-mine-horse-pit-extension-project-preliminary-documentation-epbc-2021-9031/appendix-h-aquatic-ecology-impact-assessment-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/caval-ridge/2023-caval-ridge-mine-horse-pit-extension-project-preliminary-documentation-epbc-2021-9031/appendix-i-geochemistry-impact-assessment-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/semlp_eis_app_b-1_land-resources-and-soils-report_v2.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/4/semlp_eis_app_b-2_subsidence-modelling-report.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/semlp_eis_app_c-1_terrestrial-ecology-report_v2.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/4/semlp_eis_app_d-1-aquatic-ecology-report-v2.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/3/semlp_eis_app_e-1_surface-water-quality-report_v3.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/4/semlp_eis_app_e-2_mine-water-balance-report_v3.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/4/semlp_eis_app_e-3_hydrology-hydraulics-and-geomorphology-report.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/semlp_eis_app_f-1_groundwater-modelling-report.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/semlp_eis_app_f-3_groundwater-technical-report.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/3/semlp_eis_app_g-1_geochemistry-report.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/3/semlp_eis_app_h-1_air-quality-report-n.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/semlp_eis_app_i-1_noise-and-vibration-report.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/2/semlp_eis_app_j-1_transport-report.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/2/semlp_eis_app_m-1_economics-report.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/2/semlp_eis_app_n-1_public-consultation-report.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/saraji-east-mining-lease-project-eis-2023/semlp_eis_app_b-1_land-resources-and-soils-report_v2.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/saraji-east-mining-lease-project-eis-2023/appendix-c-1-terrestrial-ecology-technical-report_v2.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/saraji-east-mining-lease-project-eis-2024/semlp_eis_app_e-1_surface-water-quality-report_v3.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/saraji-east-mining-lease-project-eis-2024/semlp_eis_app_e-2_mine-water-balance-report_v3.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/saraji-east-mining-lease-project-eis-2023/semlp_eis_f-3_groundwater-technical-report_final-reissue.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/saraji-east-mining-lease-project-eis-2023/semlp_eis_app_h-1_air-quality-report-n.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/1/semlp_eis_app_b-1_land-resources-and-soils-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/1/semlp_eis_app_b-2_subsidence-modelling-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/1/semlp_eis_app_c-1_terrestrial-ecology-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/1/semlp_eis_app_d-1-aquatic-ecology-report-v2.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/1/semlp_eis_app_e-1_surface-water-quality-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/1/semlp_eis_app_e-2_mine-water-balance-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/1/semlp_eis_app_e-3_hydrology-hydraulics-and-geomorphology-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/1/semlp_eis_app_f-1_groundwater-modelling-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/1/semlp_eis_app_f-3_groundwater-resources-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/2/semlp_eis_app_g-1_geochemistry-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/2/semlp_eis_app_h-1_air-quality-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/2/semlp_eis_app_i-1_noise-and-vibration-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/2/semlp_eis_app_j-1_transport-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/2/semlp_eis_app_m-1_economics-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/2/semlp_eis_app_n-1_public-consultation-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/community-information/02-february-2024-monthly-report.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/community-information/01-january-2024-monthly-report.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/community-information/12-december-2023-monthly-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/community-information/11-november-2023-monthly-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/community-information/10-october-2023-monthly-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/community-information/09-september-2023-monthly-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/community-information/08-august-2023-monthly-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/community-information/07-july-2023-monthly-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/community-information/06-june-2023-monthly-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/community-information/05-may-2023-monthly-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/community-information/04-april-2023-monthly-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/community-information/03-march-2023-monthly-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/community-information/02-february-2023-monthly-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/community-information/01-january-2023-monthly-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/iron-ore/western-australia-iron-ore/0000/newman-water-licence/bhp-waio---newman-wl53-operating-area-quarterly-drinking-water-quality-report---q4-2024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/iron-ore/western-australia-iron-ore/0000/newman-water-licence/bhp-waio---newman-wl53-operating-area-quarterly-drinking-water-quality-report---q3-2024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/iron-ore/western-australia-iron-ore/rail/yeerabiddy-validation-notice-appendix-2---survey-report/14092023_yeerabiddy-rail-validation-notice-final.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/iron-ore/western-australia-iron-ore/whaleback/western-australia-iron-ore-supply-authority-objectives---bhp-quarterly-reporting/240000_bhpquarterlyreportingtobuildingandenergyq42023.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/iron-ore/western-australia-iron-ore/whaleback/western-australia-iron-ore-supply-authority-objectives---bhp-quarterly-reporting/bhp-quarterly-reporting-to-building-and-energy-q3---2023.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/iron-ore/western-australia-iron-ore/whaleback/western-australia-iron-ore---supply-authority-objectives---bhp-quarterly-reporting/bhp-quarterly-reporting-to-building-and-energy-q2---2023.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/iron-ore/western-australia-iron-ore/whaleback/western-australia-iron-ore-supply-authority-objectives---bhp-quarterly-reporting/bhp-quarterly-reporting-to-building-and-energy-q1---2023.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/iron-ore/western-australia-iron-ore/whaleback/western-australia-iron-ore-supply-authority-objectives---bhp-quarterly-reporting/bhp-quarterly-reporting-to-building-and-energy-q4---2024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/iron-ore/western-australia-iron-ore/whaleback/western-australia-iron-ore-supply-authority-objectives---bhp-quarterly-reporting/bhp-quarterly-reporting-to-building-and-energy-q3---2024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/iron-ore/western-australia-iron-ore/whaleback/western-australia-iron-ore-supply-authority-objectives---bhp-quarterly-reporting/bhp-quarterly-reporting-to-building-and-energy-q2---2024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/iron-ore/western-australia-iron-ore/whaleback/western-australia-iron-ore-supply-authority-objectives---bhp-quarterly-reporting/bhp-quarterly-reporting-to-building-and-energy-q1---2024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/nickel/bhp-nickel-west-2023-mt-keith-satellite-project-statement-1087-compliance-assessment-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/nickel/nickel-west/leinster/leinster-water-licence/dept-of-health-potable-water-quarterly-report-q3-2024-jul-sep-2024---leinster-town.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/nickel/nickel-west/leinster/leinster-water-licence/dept-of-health-potable-water-quarterly-report-q2-2024---leinster-town-2.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/nickel/nickel-west/leinster/leinster-water-licence/dept-of-health-potable-water-quarterly-report-q1-2024---leinster-town.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/nickel/nickel-west/leinster/leinster-water-licence/dept-of-health-potable-water-quarterly-report-q4-2023---leinster.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/nickel/nickel-west/leinster/leinster-water-licence/dept-of-health-potable-water-quarterly-report-q3-2023---leinster.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/nickel/nickel-west/leinster/potable-water-report/dept-of-health-potable-water-quarterly-report-q2-2023---leinster.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/nickel/nickel-west/leinster/potable-water-report/dept-of-health-drinking-water-quarterly-report-q1-2023---leinster.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/caval-ridge/2023-caval-ridge-mine-horse-pit-extension-project-preliminary-documentation-epbc-2021-9031/appendix-a-additional-information-required.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/caval-ridge/2023-caval-ridge-mine-horse-pit-extension-project-preliminary-documentation-epbc-2021-9031/appendix-b-additional-information-required---cross-reference-table.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/caval-ridge/2023-caval-ridge-mine-horse-pit-extension-project-preliminary-documentation-epbc-2021-9031/appendix-d-habitat-descriptions-for-12-threatened-species-specific-to-central-queensland.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/caval-ridge/2023-caval-ridge-mine-horse-pit-extension-project-preliminary-documentation-epbc-2021-9031/appendix-e2-groundwater-dependent-ecosystem-risk-assessment.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/caval-ridge/2023-caval-ridge-mine-horse-pit-extension-project-preliminary-documentation-epbc-2021-9031/appendix-j-third-party-technical-review---groundwater-impact-assessment.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/caval-ridge/2023-caval-ridge-mine-horse-pit-extension-project-preliminary-documentation-epbc-2021-9031/appendix-k-caval-ridge-mine-environmental-authority-epml00562013.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/caval-ridge/2023-caval-ridge-mine-horse-pit-extension-project-preliminary-documentation-epbc-2021-9031/bma-hpe-project-pd-app-l-offset-strategy-app1.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/caval-ridge/2023-caval-ridge-mine-horse-pit-extension-project-preliminary-documentation-epbc-2021-9031/appendix-m-inderi-offset-area-management-plan.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/caval-ridge/2023-caval-ridge-mine-horse-pit-extension-project-preliminary-documentation-epbc-2021-9031/bma-hpe-project-pd-app-n-croydon-oamp-app1.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/caval-ridge/2023-caval-ridge-mine-horse-pit-extension-project-preliminary-documentation-epbc-2021-9031/appendix-o-cvm-environmental-management-plan.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/caval-ridge/2023-caval-ridge-mine-horse-pit-extension-project-preliminary-documentation-epbc-2021-9031/appendix-p-project-team.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/caval-ridge/2023-caval-ridge-mine-horse-pit-extension-project-preliminary-documentation-epbc-2021-9031/appendix-q-request-for-information-addendum.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/1/semlp_eis_00_table-of-contents.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/1/semlp_eis_001_abbreviations-and-glossary.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/1/semlp_eis_002_executive-summary.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/1/semlp_eis_01_introduction_v2.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/1/semlp_eis_02_project-alternatives-and-justification.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/1/semlp_eis_03_project-description.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/1/semlp_eis_04_land-use-and-tenure.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/1/semlp_eis_05_land-resources_v2.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/1/semlp_eis_06_terrestrial-ecology_v3.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/1/semlp_eis_07_aquatic-ecology_v2.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/1/semlp_eis_08-surface-water_v3.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/1/semlp_eis_09_groundwater.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/1/semlp_eis_10_geochemistry-and-mine-waste_v2.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/1/semlp_eis_11_air-quality-and-greenhouse-gas.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/1/semlp_eis_12_noise-and-vibration.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/1/semlp_eis_13_scenic-amenity-and-lighting.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/1/semlp_eis_14_transport_v4.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/1/semlp_eis_15_waste_v2.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/1/semlp_eis_16_cultural-heritage.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/1/semlp_eis_17_social_v2.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/1/semlp_eis_18_economics.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/1/semlp_eis_19_stakeholders.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/1/semlp_eis_20_hazards-health-and-safety.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/semlp_eis_21_mnes.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/1/semlp_eis_22_cumulative-impacts.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/1/semlp_eis_23_references.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/1/semlp_eis_app_a-1_tor-cross-check.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/1/semlp_eis_app_a-2_submissions-register-and-responses-v2.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/1/semlp_eis_app_a-3_approvals-framework.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/3/semlp_eis_app_b-3_-subsidence-modelling-peer-review.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/3/semlp_eis_app_c-2_offsets-strategy.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/3/semlp_eis_app_c-3_cq-threatened-species-habitat-descriptions.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/4/semlp_eis_app_d-2_groundwater-dependent-ecosystem-assessment.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/3/semlp_eis_app_e-4_subsidence-ponding-modelling-assessment.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/3/semlp_eis_app_f-2_groundwater-model-peer-review.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/2/semlp_eis_app_k-1_rehabilitation-management-plan_v2.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/2/semlp_eis_app_k-2-subsidence-management-plan_v2.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/2/semlp_eis_app_l-1_social-impact-assessment_v2.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/2/semlp_eis_app_o-1_summary-of-commitments.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-2024/2/semlp_eis_app_p_draft-decarbonisation-plan.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/saraji-east-mining-lease-project-eis-2023/semlp_eis_01_introduction_v2.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/saraji-east-mining-lease-project-eis-2023/semlp_eis_03_project-description_v2.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/saraji-east-mining-lease-project-eis-2023/semlp_eis_05_land-resources_v2.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/saraji-east-mining-lease-project-eis-2024/semlp_eis_06_terrestrial-ecology_v3.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/saraji-east-mining-lease-project-eis-2023/semlp_eis_7_aquatic-ecology_v2.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/saraji-east-mining-lease-project-eis-2024/semlp_eis_08-surface-water_v3.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/saraji-east-mining-lease-project-eis-2023/semlp_eis_9_groundwater_v2.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/saraji-east-mining-lease-project-eis-2023/semlp_eis_10_geochemistry-and-mine-waste_v2.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/saraji-east-mining-lease-project-eis-2024/semlp_eis_11-air-quality-and-greenhouse-gas_v2.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/saraji-east-mining-lease-project-eis-2024/semlp_eis_14_transport_v4.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/saraji-east-mining-lease-project-eis-2023/semlp_eis_15_waste_v2.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/saraji-east-mining-lease-project-eis-2023/semlp_eis_17_social_v2.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/saraji-east-mining-lease-project-eis-2023/semlp_eis_21_mnes_v2.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/saraji-east-mining-lease-project-eis-2024/semlp_eis_app_c-2_offsets-strategy_v3.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/saraji-east-mining-lease-project-eis-2023/semlp_eis_app_k-1_rehabilitation-management-plan_v2.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/saraji-east-mining-lease-project-eis-2023/semlp_eis_app_k-2-subsidence-management-plan_v2.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/saraji-east-mining-lease-project-eis-2023/semlp_eis_app_l-1_social-impact-assessment_v2.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/saraji-east-mining-lease-project-eis-2023/appendix-o-1-summary-of-commitments_v2.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/1/semlp_eis_a_table-of-contents.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/1/semlp_eis_aa_abbreviations-and-glossary.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/1/semlp_eis_aaa_executive-summary.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/2/semlp_eis_ch_01_introduction-v2.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/2/semlp_eis_ch_02_project-alternatives-and-justification.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/2/semlp_eis_ch_03_project-description.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/2/semlp_eis_ch_04_land-use-and-tenure.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/3/semlp_eis_ch_06_terrestrial-ecology.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/3/semlp_eis_ch_07_aquatic-ecology.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/3/semlp_eis_ch_08-surface-water.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/3/semlp_eis_ch_09_groundwater.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/3/semlp_eis_ch_10_geochemistry-and-mine-waste.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/3/semlp_eis_ch_11_air-quality-and-greenhouse-gas.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/3/semlp_eis_ch_12_noise-and-vibration.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/3/semlp_eis_ch_13_scenic-amenity-and-lighting.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/3/semlp_eis_ch_14_transport.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/3/semlp_eis_ch_15_waste.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/3/semlp_eis_ch_16_cultural-heritage.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/3/semlp_eis_ch_17_social.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/3/semlp_eis_ch_18_economics.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/3/semlp_eis_ch_19_stakeholders.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/3/semlp_eis_ch_20_hazards-health-and-safety.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/3/semlp_eis_ch_21_mnes.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/3/semlp_eis_ch_22_cumulative-impacts.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/3/semlp_eis_ch_23_references.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/1/semlp_eis_app_a-1_tor-cross-check.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/1/semlp_eis_app_a-2_submissions-register-and-responses-v2.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/1/semlp_eis_app_a-3_approvals-framework.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/1/semlp_eis_app_b-3_-subsidence-modelling-peer-review.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/1/semlp_eis_app_c-2_offsets-strategy.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/1/semlp_eis_app_d-2_groundwater-dependent-ecosystem-assessment.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/1/semlp_eis_app_e-4_subsidence-ponding-modelling-assessment.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/1/semlp_eis_app_f-2_groundwater-model-peer-review.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/2/semlp_eis_app_k-1_rehabilitation-management-plan.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/2/semlp_eis_app_k-2_subsidence-management-plan.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/2/semlp_eis_app_l-1_social-impact-assessment.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/bma/saraji-east/semlp-nov-2023/2/semlp_eis_app_o-1_summary-of-commitments.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/annual-reviews/mt-arthur-coal-annual-review-fy24_optimized.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/annual-reviews/mt-arthur-coal-annual-review-fy23_optimized.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/blast-notification-letter/20241230mtarthurcoalblastnotification_ws30122024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/blast-notification-letter/20241209mtarthurcoalblastnotification_ws09122024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/blast-notification-letter/20241125mtarthurcoalblastnotification_ws25112024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/blast-notification-letter/20241118mtarthurcoalblastnotification_ws18112024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/blast-notification-letter/20241111mtarthurcoalblastnotification_ws11112024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/blast-notification-letter/20241104mtarthurcoalblastnotification_ws04112024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/blast-notification-letter/20241028mtarthurcoalblastnotification_ws28102024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/blast-notification-letter/20241021mtarthurcoalblastnotification_ws21102024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/blast-notification-letter/20241007mtarthurcoalblastnotification_ws10072024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/blast-notification-letter/20240930mtarthurcoalblastnotification_ws30092024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/blast-notification-letter/20240923mtarthurcoalblastnotification_ws23092024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/blast-notification-letter/20240916mtarthurcoalblastnotification_ws16092024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/blast-notification-letter/20240909mtarthurcoalblastnotification_ws09092024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/blast-notification-letter/20240902mtarthurcoalblastnotification_ws02092024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/blast-notification-letter/20240826mtarthurcoalblastnotification_ws26082024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/blast-notification-letter/20240819mtarthurcoalblastnotification_ws19082024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/blast-notification-letter/20240812mtarthurcoalblastnotification_ws12082024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/community-information/community-complaints-summary_january-2025.pdf",
+        "type": "sustainability-report",
+        "year": "2025",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/community-information/community-complaints-summary_december-2024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/community-information/community-complaints-summary_november-2024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/community-information/community-complaints-summary_october-2024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/community-information/community-complaints-summary_september-2024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/community-information/community-complaints-summary_august-2024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/community-information/community-complaints-summary_july-2024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/community-information/community-complaints-summary_june-2024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/community-information/community-complaints-summary_may-2024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/community-information/community-complaints-summary_april-2024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/0000/environmental-management-plans/mt-arthur-coal-mine-forward-program-fy25-fy26.pdf",
+        "type": "sustainability-report",
+        "year": "2025",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/environmental-management-plans/bhp01-005-mt-arthur-rmp_20240611_v16-final.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/independent-environmental-audits/0696311-mac_iea_2023_final_v21.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/mt-arthur-coal-community-consultative-committee-ccc/mac-ccc---may-2024-pre-read.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/mt-arthur-coal-community-consultative-committee-ccc/agenda---mt-arthur-coal-ccc-meeting---15-may-2024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/mt-arthur-coal-community-consultative-committee-ccc/mac-ccc-14-february-2024-endorsed.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/mt-arthur-coal-community-consultative-committee-ccc/agenda---mt-arthur-coal-ccc-meeting---14-feb-2024_final.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/mt-arthur-coal-community-consultative-committee-ccc/mac-ccc-14-august-2024--minutes-final.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/mt-arthur-coal-community-consultative-committee-ccc/mac-ccc---february-2024-pre-read.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/mt-arthur-coal-community-consultative-committee-ccc/august-2024-pre-read---mac-ccc-final.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/mt-arthur-coal-community-consultative-committee-ccc/agenda---mt-arthur-coal-ccc-meeting---14-aug-2024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/mt-arthur-coal-community-consultative-committee-ccc/8-november-2023-ccc-meeting---minutes.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/mt-arthur-coal-community-consultative-committee-ccc/mac-ccc---november-2023-pre-read.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/mt-arthur-coal-community-consultative-committee-ccc/agenda---mt-arthur-coal-ccc-meeting---8-november-2023.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/mt-arthur-coal-community-consultative-committee-ccc/pre-read-august-2023.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/mt-arthur-coal-community-consultative-committee-ccc/agenda---mt-arthur-coal-meeting---9-august-2023.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/mt-arthur-coal-community-consultative-committee-ccc/may-2023-pre-read---mac-ccc.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/mt-arthur-coal-community-consultative-committee-ccc/agenda---mt-arthur-coal-meeting---8-february-2023.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/copper/olympic-dam/olympic-dam/230000_epmp/external-fy23-olympic-dam-closure-management-and-rehabilitation-plan_v6_final.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/copper/olympic-dam/olympic-dam/230000_epmp/environmental-management-manual_fy23-final.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/copper/olympic-dam/olympic-dam/230000_epmp/environmental-management-program-annual-targets-action-and-major-changes-2023_fy23-final.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/copper/olympic-dam/olympic-dam/230000_epmp/environmental-mangagement-program_fy23-final.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/copper/olympic-dam/olympic-dam/230000_epmp/monitoring-program---airborne-emissions_fy23_-final.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/copper/olympic-dam/olympic-dam/230000_epmp/monitoring-program--energy-use--greenhouse-gas-emissionsfy23-final.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/copper/olympic-dam/olympic-dam/230000_epmp/monitoring-program---environmental-radiation_fy23-final.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/copper/olympic-dam/olympic-dam/230000_epmp/monitoring-program---fauna_fy23-_-final.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/copper/olympic-dam/olympic-dam/230000_epmp/monitoring-program---flora_fy23-_-final.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/copper/olympic-dam/olympic-dam/230000_epmp/monitoring-program---groundwater_fy23_final.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/copper/olympic-dam/olympic-dam/230000_epmp/monitoring-program---social-effects_fy23-final.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/copper/olympic-dam/olympic-dam/230000_epmp/monitoring-program---waste_fy23-final.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/copper/west-musgrave/wmp_car-ms1188_2024---signed.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/copper/west-musgrave/oz-mins-2023-nger-kpmg-opinion.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/iron-ore/western-australia-iron-ore/0000/regulatory-information/bhp-waio_doh-mou_text_jul2023.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/iron-ore/western-australia-iron-ore/0000/western-australia-iron-ore-pilbara-strategic-assessment-commonwealth/20230509bhpwaioapoprev23.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/iron-ore/western-australia-iron-ore/jimblebar/five-year-review/20230509-waio-epbc-sea-five-year-review_rev1_final.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/iron-ore/western-australia-iron-ore/rail/railworks/20230612-mooka-rail-siding-validation-notice.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/iron-ore/western-australia-iron-ore/whaleback/western-ridge-draft-validation-notice-appendices/western-ridge-validation-notice-30september2024_optimized.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/iron-ore/western-australia-iron-ore/jimblebar/western-australian-iron-ore---pilbara-strategic-assessment-commonwealth/jimblebar-significant-amendment-validation-notice-31-january-2025.pdf",
+        "type": "sustainability-report",
+        "year": "2025",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/iron-ore/western-australia-iron-ore/jimblebar/western-australian-iron-ore---pilbara-strategic-assessment-commonwealth--validation-notices/east-pilbara-surplus-water-drilling-validation-notice-16-october-2024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/iron-ore/western-australia-iron-ore/jimblebar/western-australian-iron-ore---pilbara-strategic-assessment-commonwealth--validation-notices/appendix-3-bhp-response-to-dcceew_20241011.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/iron-ore/western-australia-iron-ore/rail/railworks/spectrum-2023-mooka-rail-preclearance-survey.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/iron-ore/western-australia-iron-ore/whaleback/western-australia-iron-ore-supply-authority-objectives/annual-network-safety-performance-objectives-2024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/iron-ore/western-australia-iron-ore/whaleback/western-australia-iron-ore-supply-authority-objectives/annual-network-safety-performance-objectives-2023.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/nickel/nickel-west/leinster/leinster-water-licence/bhp-nickelwest_doh-mou_text_jun2024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/regulatory---environmental-monitoring-information/2312_coal_nswec_mtarthur_coalenvironmentalmonitoringdatadec2023.xlsx",
+        "type": "excel-data",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "excel"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/environmental-monitoring-information/2311_coal_nswec_mtarthur_coalenvironmentalmonitoringdatanov2023-v2.xlsx",
+        "type": "excel-data",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "excel"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/environmental-monitoring-information/2310_coal_nswec_mtarthur_coalenvironmentalmonitoringdataoct2023-v2.xlsx",
+        "type": "excel-data",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "excel"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/environmental-monitoring-information/2309_coal_nswec_mtarthur_coalenvironmentalmonitoringdatasept2023-v2.xlsx",
+        "type": "excel-data",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "excel"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/regulatory---environmental-monitoring-information/2308_coal_nswec_mtarthur_coalenvironmentalmonitoringdataaug2023---r1.xlsx",
+        "type": "excel-data",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "excel"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/regulatory---environmental-monitoring-information/2307_coal_nswec_mtarthur_coalenvironmentalmonitoringdatajuly2023.xlsx",
+        "type": "excel-data",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "excel"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/regulatory---environmental-monitoring-information/2306_coal_nswec_mtarthur_coalenvironmentalmonitoringdatajune2023.xlsx",
+        "type": "excel-data",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "excel"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/regulatory---environmental-monitoring-information/2305_coal_nswec_mtarthur_coalenvironmentalmonitoringdatamay2023.xlsx",
+        "type": "excel-data",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "excel"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/regulatory---environmental-monitoring-information/2304_coal_nswec_mtarthur_coalenvironmentalmonitoringdata-april2023.xlsx",
+        "type": "excel-data",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "excel"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/regulatory---environmental-monitoring-information/2303_coal_nswec_mtarthur_coalenvironmentalmonitoringdata-march2023.xlsx",
+        "type": "excel-data",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "excel"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/regulatory---environmental-monitoring-information/2302_coal_nswec_mtarthur_coalenvironmentalmonitoringdata-february2023.xlsx",
+        "type": "excel-data",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "excel"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/bhp/regulatory-information-media/coal/nswec/mt-arthur-coal/regulatory---environmental-monitoring-information/2301_coal_nswec_mtarthur_coalenvironmentalmonitoringdata-january2023.xlsx",
+        "type": "excel-data",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/sustainability/environment/regulatory-information",
+        "source_section": "sustainability",
+        "file_type": "excel"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2024/240827_limiteorganizativodelosinformesdesostenibilidad.pdf",
+        "type": "annual-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/climate-change",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/project/bhp1ip/bhp-com-en/documents/sustainability/2024/bhp---direct-climate-policy-advocacy.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/climate-change/advocacy-on-climate-policy",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/investors/shareholder-information/2024/241029_bhpgrouplimitedshareholderinformation_asat16july2024.xlsx",
+        "type": "excel-data",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/ethics-business-conduct",
+        "source_section": "sustainability",
+        "file_type": "excel"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/investors/shareholder-information/2024/241029_entitiesinwhichbhpgrouplimitedseffectiveinterestis100_asat30june2024.xlsx",
+        "type": "excel-data",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/ethics-business-conduct",
+        "source_section": "sustainability",
+        "file_type": "excel"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/investors/shareholder-information/2024/241029_entitiesinwhichbhpgrouplimitedseffectiveinterestislessthan100_asat30june2024.xlsx",
+        "type": "excel-data",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/ethics-business-conduct",
+        "source_section": "sustainability",
+        "file_type": "excel"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/investors/shareholder-information/2024/241029_bhpminingoperationsjointventures.xlsx",
+        "type": "excel-data",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/ethics-business-conduct",
+        "source_section": "sustainability",
+        "file_type": "excel"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/project/bhp1ip/bhp-com-en/documents/sustainability/2024/241211_bhpdisabilityactionplanen.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/people",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/project/bhp1ip/bhp-com-en/documents/sustainability/2024/241211_bhpdisabilityactionplanes.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/sustainability/people",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2023/230822_sustainabilityreportingorganisationalboundarydefinitionsanddisclaimers.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/investors/annual-reporting/annual-report-2024",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2024/bhpform20f2024.pdf",
+        "type": "annual-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/investors/annual-reporting/annual-report-2024",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2024/240827_economiccontributionreportextract2024.pdf",
+        "type": "annual-report",
+        "year": "2024",
+        "source_page": "https://www.bhp.com/investors/annual-reporting/annual-report-2024",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2023/230822_bhpannualreport2023.pdf",
+        "type": "annual-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/investors/annual-reporting/annual-report-2024",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2023/230822_2023letterfromtheremunerationcommitteechair.pdf",
+        "type": "annual-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/investors/annual-reporting/annual-report-2024",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2023/230822_bhpeconomiccontributionreport2023.pdf",
+        "type": "annual-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/investors/annual-reporting/annual-report-2024",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2023/220822_bhpscopes12and3emissionscalculationmethodology2023.pdf",
+        "type": "annual-report",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/investors/annual-reporting/annual-report-2024",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2023/230822_esgstandardsanddatabook2023.xlsx",
+        "type": "esg-data",
+        "year": "2023",
+        "source_page": "https://www.bhp.com/investors/annual-reporting/annual-report-2024",
+        "source_section": "sustainability",
+        "file_type": "excel"
+      }
+    ],
+    "governance_url": "https://www.bhp.com/our-approach/our-company/governance",
+    "base_url": "https://www.bhp.com"
+  },
+  {
+    "company_url": "https://www.listcorp.com/asx/nab/national-australia-bank-limited",
+    "company_name": "National Australia Bank Limited",
+    "sustainability_pages": [
+      {
+        "url": "https://www.nab.com.au/about-us/shareholder-centre/financial-disclosures-and-reporting/annual-reporting-suite",
+        "type": "annual-reports"
+      },
+      {
+        "url": "https://www.nab.com.au/corporate/sustainability-esg",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.nab.com.au/about-us/sustainability",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.nab.com.au/about-us/sustainability/natural-disaster-relief-support",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.nab.com.au/about-us/sustainability/nab-foundation",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.nab.com.au/about-us/sustainability/environment",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.nab.com.au/about-us/sustainability/customer-community-support",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.nab.com.au/about-us/sustainability/reporting-policies-approach",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.nab.com.au/about-us/sustainability/environment/climate-change",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.nab.com.au/about-us/sustainability/customer-community-support/first-nations-support",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.nab.com.au/content/nabrwd/en/about-us/sustainability/customer-community-support/gender-equity.",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.nab.com.au/about-us/sustainability/reporting-policies-approach/performance-reporting#modern-slavery-statement",
+        "type": "sustainability"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nabrwd/documents/reports/corporate/esg-risk-principles.pdf",
+        "type": "esg"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nab/documents/reports/corporate/2024-annual-report.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nab/documents/reports/corporate/2024-asx-announcement-appendix-4g.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nabrwd/documents/policy/corporate/group-securities-trading-policy.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nabrwd/documents/reports/corporate/board-charter.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nabrwd/documents/policy/corporate/board-composition-renewal-and-performance-policy.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nabrwd/documents/policy/corporate/board-committees-operating-rules.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nabrwd/documents/policy/corporate/principal-board-risk-committee-charter.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nabrwd/documents/reports/corporate/principal-board-audit-committee-charter.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nabrwd/documents/policy/corporate/remuneration-committee-charter.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nabrwd/documents/policy/corporate/nomination-committee-charter.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nabrwd/documents/policy/corporate/board-customer-committee-charter.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nabrwd/documents/policy/banking/group-disclosure-external-communication-policy.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nab/documents/policy/corporate/group-inclusion-diversity-policy.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nab/documents/reports/corporate/reconciliation-action-plan-2024-2027.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nabrwd/documents/reports/corporate/wgea-questionnaire-report.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nabrwd/documents/reports/corporate/nab-wgea-workplace-profile-table.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nabrwd/documents/reports/corporate/nab-wgea-workforce-management-statistics-table.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nabrwd/About-Us/shareholder-centre/documents/discrimination-harassment-guidelines.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nab/documents/policy/corporate/capital-markets-allocation-summary.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nab/documents/policy/corporate/political-contributions-policy.pdf",
+        "type": "documents"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nab/documents/reports/corporate/nab-2022-constitution.pdf",
+        "type": "documents"
+      }
+    ],
+    "sustainability_reports": [
+      {
+        "url": "https://www.nab.com.au/content/dam/nab/documents/reports/corporate/2024-climate-report.pdf",
+        "type": "climate-report",
+        "year": "2024",
+        "source_page": "https://www.nab.com.au/about-us/shareholder-centre/financial-disclosures-and-reporting/annual-reporting-suite",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nab/documents/reports/corporate/2024-annual-report.pdf",
+        "type": "annual-report",
+        "year": "2024",
+        "source_page": "https://www.nab.com.au/about-us/shareholder-centre/financial-disclosures-and-reporting/annual-reporting-suite",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nab/documents/reports/corporate/2023-annual-report.pdf",
+        "type": "annual-report",
+        "year": "2023",
+        "source_page": "https://www.nab.com.au/about-us/shareholder-centre/financial-disclosures-and-reporting/annual-reporting-suite",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nab/documents/reports/corporate/2024-full-year-results.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.nab.com.au/about-us/shareholder-centre/financial-disclosures-and-reporting/annual-reporting-suite",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nab/documents/reports/corporate/2024-full-year-results-investor-presentation.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.nab.com.au/about-us/shareholder-centre/financial-disclosures-and-reporting/annual-reporting-suite",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nab/documents/reports/corporate/2024-full-year-pillar-3-report.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.nab.com.au/about-us/shareholder-centre/financial-disclosures-and-reporting/annual-reporting-suite",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nab/documents/reports/corporate/2024-sustainability-data-pack.xlsx",
+        "type": "sustainability-data",
+        "year": "2024",
+        "source_page": "https://www.nab.com.au/about-us/shareholder-centre/financial-disclosures-and-reporting/annual-reporting-suite",
+        "source_section": "sustainability",
+        "file_type": "excel"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nab/documents/reports/corporate/2023-climate-report.pdf",
+        "type": "climate-report",
+        "year": "2023",
+        "source_page": "https://www.nab.com.au/about-us/sustainability/reporting-policies-approach/performance-reporting#modern-slavery-statement",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nab/documents/reports/corporate/2024-ep-audit-assurance-statement.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.nab.com.au/about-us/sustainability/reporting-policies-approach/performance-reporting#modern-slavery-statement",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nab/documents/reports/corporate/2024-equator-principles-report.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.nab.com.au/about-us/sustainability/reporting-policies-approach/performance-reporting#modern-slavery-statement",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nabrwd/documents/reports/corporate/2023-equator-principles-report.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.nab.com.au/about-us/sustainability/reporting-policies-approach/performance-reporting#modern-slavery-statement",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nabrwd/documents/reports/corporate/2023-cdp-climate-change.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.nab.com.au/about-us/sustainability/reporting-policies-approach/performance-reporting#modern-slavery-statement",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nab/documents/pds/social-impact/nab-modern-slavery-statement-2024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.nab.com.au/about-us/sustainability/reporting-policies-approach/performance-reporting#modern-slavery-statement",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nabrwd/documents/pds/social-impact/nab-modern-slavery-statement-2023.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.nab.com.au/about-us/sustainability/reporting-policies-approach/performance-reporting#modern-slavery-statement",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nab/documents/reports/corporate/2023-sustainability-data-pack.xlsx",
+        "type": "sustainability-data",
+        "year": "2023",
+        "source_page": "https://www.nab.com.au/about-us/sustainability/reporting-policies-approach/performance-reporting#modern-slavery-statement",
+        "source_section": "sustainability",
+        "file_type": "excel"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nab/documents/reports/corporate/reconciliation-action-plan-2024-2027.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.nab.com.au/about-us/sustainability/customer-community-support/first-nations-support",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nab/documents/reports/corporate/nab-gender-pay-gap-report-2024.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.nab.com.au/content/nabrwd/en/about-us/sustainability/customer-community-support/gender-equity.",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nab/documents/reports/corporate/2024-uk-gender-pay-gap.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.nab.com.au/content/nabrwd/en/about-us/sustainability/customer-community-support/gender-equity.",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nabrwd/documents/reports/corporate/nab-gender-pay-gap-report-2023.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.nab.com.au/content/nabrwd/en/about-us/sustainability/customer-community-support/gender-equity.",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nabrwd/documents/reports/corporate/2023-uk-gender-pay-gap.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.nab.com.au/content/nabrwd/en/about-us/sustainability/customer-community-support/gender-equity.",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nabrwd/documents/reports/corporate/accessibility-action-plan-2023-2024.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.nab.com.au/about-us/sustainability/customer-community-support/accessible-banking",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nabrwd/documents/reports/corporate/accessibility-action-plan-2023-2024-easy-english.pdf",
+        "type": "sustainability-report",
+        "year": "2023",
+        "source_page": "https://www.nab.com.au/about-us/sustainability/customer-community-support/accessible-banking",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      },
+      {
+        "url": "https://www.nab.com.au/content/dam/nabrwd/documents/reports/corporate/nab-vulnerability-framework-easy-english-2024-2026.pdf",
+        "type": "sustainability-report",
+        "year": "2024",
+        "source_page": "https://www.nab.com.au/about-us/sustainability/customer-community-support/accessible-banking",
+        "source_section": "sustainability",
+        "file_type": "pdf"
+      }
+    ],
+    "governance_url": "https://www.nab.com.au/about-us/corporate-governance",
+    "base_url": "https://www.nab.com.au"
+  }
+]

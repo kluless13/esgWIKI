@@ -1,5 +1,6 @@
 import os
 import time
+import re
 from bs4 import BeautifulSoup
 import requests
 from urllib.parse import urljoin, urlparse, unquote
@@ -13,7 +14,28 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
 
-def setup_chrome_driver(download_dir: str, use_headless: bool = False) -> webdriver.Chrome:
+# Test configuration
+TEST_OUTPUT_DIR = os.path.join(os.path.dirname(__file__), 'test_output')
+TEST_DOWNLOADS_DIR = os.path.join(TEST_OUTPUT_DIR, 'downloads')
+
+# Ensure test directories exist
+os.makedirs(TEST_OUTPUT_DIR, exist_ok=True)
+os.makedirs(TEST_DOWNLOADS_DIR, exist_ok=True)
+
+# Valid years for filtering
+VALID_YEARS = {'2022', '2023', '2024'}
+
+def extract_year_from_url(url: str) -> Optional[str]:
+    """Extract year from URL if present."""
+    year_match = re.search(r'(20\d{2})', url.lower())
+    return year_match.group(1) if year_match else None
+
+def is_valid_year(url: str) -> bool:
+    """Check if URL contains a valid year (2022-2024)."""
+    year = extract_year_from_url(url)
+    return year in VALID_YEARS if year else False
+
+def setup_chrome_driver(download_dir: str = TEST_DOWNLOADS_DIR, use_headless: bool = False) -> webdriver.Chrome:
     """
     Set up Chrome driver with appropriate options for downloading Excel files.
     Headless mode is optional and disabled by default.
@@ -76,12 +98,12 @@ def wait_for_download(download_dir: str, timeout: int = 60) -> bool:
     return False
 
 class SmartDownloader:
-    def __init__(self, download_dir: str):
+    def __init__(self, download_dir: str = TEST_DOWNLOADS_DIR):
         self.download_manager = DownloadManager(download_dir)
-        self.download_dir = download_dir  # Store download_dir directly
+        self.download_dir = download_dir
         self.session = requests.Session()
-        self.processed_urls = set()  # Track processed URLs
-        self.downloaded_files = set()  # Track downloaded files by their base names
+        self.processed_urls = set()
+        self.downloaded_files = set()
         
         # Configure retry strategy
         retry_strategy = Retry(
@@ -158,6 +180,10 @@ class SmartDownloader:
                 
                 # Skip javascript and other non-http(s) links
                 if not normalized_url.startswith(('http://', 'https://')):
+                    continue
+                
+                # Check if the URL is from a valid year
+                if not is_valid_year(normalized_url):
                     continue
                 
                 # Check if the link points to a PDF or Excel file
@@ -249,6 +275,11 @@ class SmartDownloader:
         Smartly handle both direct file downloads and webpage scraping.
         Returns (success, list of downloaded files)
         """
+        # Skip if URL is not from valid years
+        if not is_valid_year(url):
+            print(f"Skipping URL (not from years {VALID_YEARS}): {url}")
+            return True, []
+
         # Skip if URL has already been processed
         normalized_url = self.normalize_url(url)
         if normalized_url in self.processed_urls:
@@ -351,12 +382,8 @@ class SmartDownloader:
 
 def test_multiple_urls(urls: List[str], use_headless: bool = False):
     """Test the downloader with multiple URLs."""
-    # Initialize paths
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    download_dir = os.path.join(current_dir, 'downloads')
-    
-    # Create smart downloader
-    downloader = SmartDownloader(download_dir)
+    # Initialize downloader with test downloads directory
+    downloader = SmartDownloader(TEST_DOWNLOADS_DIR)
     
     # Track results
     results = {
@@ -418,28 +445,28 @@ def main():
     # Test URLs for specific companies with a mix of direct and indirect URLs
     test_urls = {
         'BHP': [
-            # Direct PDF
+            # Direct PDF 2024
             "https://www.bhp.com/-/media/documents/investors/annual-reports/2024/240827_bhpannualreport2024.pdf",
-            # Direct Excel
+            # Direct Excel 2024
             "https://www.bhp.com/-/media/documents/investors/annual-reports/2024/240827_esgstandardsanddatabook2024.xlsx",
-            # Indirect URL
-            "https://www.bhp.com/-/media/Documents/Investors/Annual-Reports/2024/240827_ESGStandardsandDatabook2024"
+            # Direct PDF 2023
+            "https://www.bhp.com/-/media/documents/investors/annual-reports/2023/230815_bhpannualreport2023.pdf"
         ],
         'CommBank': [
-            # Direct PDF
+            # Direct PDF 2024
             "https://www.commbank.com.au/content/dam/commbank-assets/investors/docs/results/fy24/CBA-2024-Climate-Report.pdf",
-            # Indirect URL
-            "https://www.commbank.com.au/about-us/investors/annual-reports/climate-report-2024.html",
-            # Another indirect URL
-            "https://www.commbank.com.au/about-us/investors/annual-reports/climate-report-2022.html?ei=climate-report-2022"
+            # Direct PDF 2023
+            "https://www.commbank.com.au/content/dam/commbank-assets/investors/docs/results/fy23/CBA-2023-Annual-Report.pdf",
+            # Direct PDF 2022
+            "https://www.commbank.com.au/content/dam/commbank-assets/investors/docs/results/fy22/CBA-2022-Annual-Report.pdf"
         ],
         'NAB': [
-            # Direct PDF
+            # Direct PDF 2024
             "https://www.nab.com.au/content/dam/nab/documents/reports/corporate/2024-climate-report.pdf",
-            # Direct Excel
+            # Direct Excel 2024
             "https://www.nab.com.au/content/dam/nab/documents/reports/corporate/2024-sustainability-data-pack.xlsx",
-            # Direct PDF with different format
-            "https://www.nab.com.au/content/dam/nab/documents/reports/corporate/2024-carbon-inventory-and-exclusions-for-operational-emissions.pdf"
+            # Direct PDF 2023
+            "https://www.nab.com.au/content/dam/nab/documents/reports/corporate/2023-annual-financial-report.pdf"
         ]
     }
 

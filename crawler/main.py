@@ -378,12 +378,18 @@ async def process_company(crawler, company_url, company_name):
 
 async def process_sustainability_section(crawler, section_url, company_data, processed_urls, processed_pdfs):
     """Helper function to process a sustainability section"""
+    if section_url in processed_urls:
+        return
+    
+    processed_urls.add(section_url)
+    valid_years = get_valid_years()
+    
     try:
         sus_result = await crawler.arun(
             url=section_url,
             config=CrawlerRunConfig(
                 cache_mode=CacheMode.BYPASS,
-                wait_until='networkidle',  # Changed to ensure dynamic content loads
+                wait_until='networkidle',
                 page_timeout=180000  # Increased timeout
             )
         )
@@ -400,13 +406,26 @@ async def process_sustainability_section(crawler, section_url, company_data, pro
             # Process the main section page for PDFs
             await process_page_for_pdfs(sus_result.cleaned_html, section_url, section_type, company_data, processed_pdfs)
             
-            # Look for subsections that might contain PDFs
+            # Enhanced patterns for finding subsections
             subsection_patterns = [
+                # Common report repository sections
                 r'href="([^"]*?/reports?[^"]*?)"',
                 r'href="([^"]*?/publications?[^"]*?)"',
                 r'href="([^"]*?/documents?[^"]*?)"',
                 r'href="([^"]*?/downloads?[^"]*?)"',
-                r'href="([^"]*?/resources?[^"]*?)"'
+                r'href="([^"]*?/resources?[^"]*?)"',
+                # ESG and sustainability specific sections
+                r'href="([^"]*?/sustainability[^"]*?)"',
+                r'href="([^"]*?/esg[^"]*?)"',
+                r'href="([^"]*?/environment[^"]*?)"',
+                r'href="([^"]*?/climate[^"]*?)"',
+                # Annual report sections
+                r'href="([^"]*?/annual[^"]*?report[^"]*?)"',
+                r'href="([^"]*?/financial[^"]*?report[^"]*?)"',
+                # Additional common patterns
+                r'href="([^"]*?/performance[^"]*?)"',
+                r'href="([^"]*?/governance[^"]*?)"',
+                r'href="([^"]*?/policies[^"]*?)"'
             ]
             
             for subsection_pattern in subsection_patterns:
@@ -429,9 +448,7 @@ async def process_sustainability_section(crawler, section_url, company_data, pro
                             
                             if year and year in valid_years:
                                 processed_pdfs.add(subsection_url)
-                                report_type = 'sustainability-report' if 'sustainability' in subsection_url.lower() else 'annual-report'
-                                if file_type == 'excel':
-                                    report_type = 'esg-data' if 'esg' in subsection_url.lower() else 'excel-data'
+                                report_type = determine_report_type(subsection_url, file_type)
                                 
                                 report_data = {
                                     'url': subsection_url,
@@ -452,6 +469,42 @@ async def process_sustainability_section(crawler, section_url, company_data, pro
                         
     except Exception as e:
         print(f"Error accessing sustainability section {section_url}: {str(e)}")
+
+
+def determine_report_type(url, file_type):
+    """Helper function to determine report type based on URL and file type"""
+    url_lower = url.lower()
+    
+    # ESG Reports
+    if 'esg' in url_lower:
+        return 'esg-data' if file_type == 'excel' else 'esg-report'
+    
+    # Sustainability Reports
+    if 'sustainability' in url_lower:
+        return 'sustainability-data' if file_type == 'excel' else 'sustainability-report'
+    
+    # Climate Reports
+    if 'climate' in url_lower or 'tcfd' in url_lower:
+        return 'climate-report'
+    
+    # Environmental Reports
+    if 'environment' in url_lower:
+        return 'environmental-report'
+    
+    # Annual Reports
+    if 'annual' in url_lower:
+        return 'annual-report'
+    
+    # Performance Data
+    if 'performance' in url_lower and file_type == 'excel':
+        return 'performance-data'
+    
+    # Metrics Data
+    if 'metrics' in url_lower and file_type == 'excel':
+        return 'metrics-data'
+    
+    # Default types based on file type
+    return 'excel-data' if file_type == 'excel' else 'sustainability-report'
 
 
 async def process_subsection(crawler, subsection_url, section_type, company_data, processed_pdfs):
@@ -520,7 +573,7 @@ async def process_page_for_pdfs(html_content, base_url, section_type, company_da
     
     # Combined pattern for both PDF and Excel files
     file_patterns = [
-        # PDF patterns
+        # PDF Report Patterns
         (r'href="([^"]*?sustainability[^"]*?report[^"]*?\.pdf)"', 'sustainability-report'),
         (r'href="([^"]*?esg[^"]*?report[^"]*?\.pdf)"', 'esg-report'),
         (r'href="([^"]*?climate[^"]*?report[^"]*?\.pdf)"', 'climate-report'),
@@ -532,21 +585,23 @@ async def process_page_for_pdfs(html_content, base_url, section_type, company_da
         (r'href="([^"]*?tcfd[^"]*?report[^"]*?\.pdf)"', 'tcfd-report'),
         (r'href="([^"]*?social[^"]*?report[^"]*?\.pdf)"', 'social-report'),
         (r'href="([^"]*?governance[^"]*?report[^"]*?\.pdf)"', 'governance-report'),
-        # Additional patterns for CBA
-        (r'href="([^"]*?/documents/[^"]*?report[^"]*?\.pdf)"', 'annual-report'),
-        (r'href="([^"]*?/content/dam/[^"]*?report[^"]*?\.pdf)"', 'annual-report'),
-        (r'href="([^"]*?/content/dam/[^"]*?sustainability[^"]*?\.pdf)"', 'sustainability-report'),
-        (r'href="([^"]*?/content/dam/[^"]*?esg[^"]*?\.pdf)"', 'esg-report'),
-        # Excel patterns - includes both extension and keyword matching
-        (r'href="([^"]*?\.xlsx?)"', 'excel-data'),  # Extension-based pattern
-        (r'href="([^"]*?esg[^"]*?standards?[^"]*?(?:data)?book)"', 'esg-data'),  # Keyword-based patterns
-        (r'href="([^"]*?esg[^"]*?data[^"]*?)"', 'esg-data'),
-        (r'href="([^"]*?sustainability[^"]*?data[^"]*?)"', 'sustainability-data'),
-        (r'href="([^"]*?performance[^"]*?data[^"]*?)"', 'performance-data'),
-        (r'href="([^"]*?metrics[^"]*?data[^"]*?)"', 'metrics-data'),
-        # Additional Excel patterns for CBA
-        (r'href="([^"]*?/documents/[^"]*?data[^"]*?\.xlsx?)"', 'excel-data'),
-        (r'href="([^"]*?/content/dam/[^"]*?data[^"]*?\.xlsx?)"', 'excel-data')
+        (r'href="([^"]*?responsibility[^"]*?report[^"]*?\.pdf)"', 'responsibility-report'),
+        # Generic PDF patterns
+        (r'href="([^"]*?report[^"]*?\.pdf)"', 'sustainability-report'),
+        (r'href="([^"]*?\.pdf)"', 'pdf-document'),
+        
+        # Excel Data Patterns
+        (r'href="([^"]*?esg[^"]*?data[^"]*?\.xlsx?)"', 'esg-data'),
+        (r'href="([^"]*?sustainability[^"]*?data[^"]*?\.xlsx?)"', 'sustainability-data'),
+        (r'href="([^"]*?performance[^"]*?data[^"]*?\.xlsx?)"', 'performance-data'),
+        (r'href="([^"]*?metrics[^"]*?data[^"]*?\.xlsx?)"', 'metrics-data'),
+        # Generic Excel patterns
+        (r'href="([^"]*?data[^"]*?\.xlsx?)"', 'excel-data'),
+        (r'href="([^"]*?\.xlsx?)"', 'excel-document'),
+        
+        # Additional formats
+        (r'href="([^"]*?\.csv)"', 'csv-data'),
+        (r'href="([^"]*?\.json)"', 'json-data')
     ]
     
     for pattern, report_type in file_patterns:
@@ -557,37 +612,38 @@ async def process_page_for_pdfs(html_content, base_url, section_type, company_da
                 file_url = urljoin(base_url, file_url)
             
             # Skip if we've already processed this file or if it's not from company domain
-            if file_url in processed_pdfs or not is_url_from_company(file_url, base_url):
+            if file_url in processed_pdfs or not is_url_from_company(file_url, company_data['base_url']):
                 continue
             
-            # Extract year if present in the URL or filename
-            year_match = re.search(r'20\d{2}', file_url)
-            year = year_match.group(0) if year_match else None
+            processed_pdfs.add(file_url)
+            
+            # Try different year formats
+            year = None
+            
+            # Try fiscal year format (FY22, FY2022, etc)
+            fy_match = re.search(r'fy(?:20)?(\d{2})', file_url.lower())
+            if fy_match:
+                year = f"20{fy_match.group(1)}"
+            else:
+                # Try direct year format (2022, 2023, etc)
+                year_match = re.search(r'20\d{2}', file_url)
+                if year_match:
+                    year = year_match.group(0)
             
             # Skip if report is older than 3 years
             if not year or year not in valid_years:
                 continue
-                
-            processed_pdfs.add(file_url)
             
-            # Determine if this is an Excel file based on extension OR keywords
-            is_excel = (
-                file_url.lower().endswith(('.xls', '.xlsx')) or
-                'databook' in file_url.lower() or
-                ('esg' in file_url.lower() and 'data' in file_url.lower()) or
-                ('standards' in file_url.lower() and 'data' in file_url.lower())
-            )
+            # Determine file type
+            file_type = 'excel' if file_url.lower().endswith(('.xlsx', '.xls')) else 'pdf'
+            if file_url.lower().endswith('.csv'):
+                file_type = 'csv'
+            elif file_url.lower().endswith('.json'):
+                file_type = 'json'
             
-            # Refine report type for Excel files if needed
-            if is_excel and report_type == 'excel-data':
-                if 'esg' in file_url.lower():
-                    report_type = 'esg-data'
-                elif 'sustainability' in file_url.lower():
-                    report_type = 'sustainability-data'
-                elif 'performance' in file_url.lower():
-                    report_type = 'performance-data'
-                elif 'metrics' in file_url.lower():
-                    report_type = 'metrics-data'
+            # Refine report type based on URL content if it's a generic type
+            if report_type in ['pdf-document', 'excel-document']:
+                report_type = determine_report_type(file_url, file_type)
             
             report_data = {
                 'url': file_url,
@@ -595,12 +651,12 @@ async def process_page_for_pdfs(html_content, base_url, section_type, company_da
                 'year': year,
                 'source_page': base_url,
                 'source_section': section_type,
-                'file_type': 'excel' if is_excel else 'pdf'
+                'file_type': file_type
             }
             
             # Check if we already have this report
             if not any(r['url'] == file_url for r in company_data['sustainability_reports']):
-                print(f"Found {report_type} ({year}) [{report_data['file_type']}]: {file_url}")
+                print(f"Found {report_type} ({year}) [{file_type}]: {file_url}")
                 company_data['sustainability_reports'].append(report_data)
 
 
