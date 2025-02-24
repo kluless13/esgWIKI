@@ -98,10 +98,37 @@ def wait_for_download(download_dir: str, timeout: int = 60) -> bool:
         time.sleep(1)
     return False
 
+def extract_company_name(url: str) -> str:
+    """Extract company name from URL."""
+    # Common company domains and their names
+    company_mappings = {
+        'commbank.com.au': 'commbank',
+        'bhp.com': 'bhp',
+        'nab.com.au': 'nab',
+        'westpac.com.au': 'westpac',
+        'anz.com': 'anz',
+        'anz.com.au': 'anz',
+        'riotinto.com': 'riotinto',
+        'woodside.com.au': 'woodside',
+        'santos.com': 'santos',
+        'wesfarmers.com.au': 'wesfarmers'
+    }
+    
+    parsed_url = urlparse(url)
+    domain = parsed_url.netloc.lower()
+    
+    # Try to match domain directly
+    for company_domain, company_name in company_mappings.items():
+        if company_domain in domain:
+            return company_name
+            
+    # If no match found, use domain name as fallback
+    return domain.split('.')[0]
+
 class SmartDownloader:
     def __init__(self, download_dir: str = TEST_DOWNLOADS_DIR):
+        self.base_download_dir = download_dir
         self.download_manager = DownloadManager(download_dir)
-        self.download_dir = download_dir
         self.session = requests.Session()
         self.processed_urls = set()
         self.downloaded_files = set()
@@ -201,6 +228,13 @@ class SmartDownloader:
             print(f"Warning: Failed to extract links from {url}: {str(e)}")
             return []
 
+    def get_company_download_dir(self, url: str) -> str:
+        """Get the company-specific download directory."""
+        company_name = extract_company_name(url)
+        company_dir = os.path.join(self.base_download_dir, company_name)
+        os.makedirs(company_dir, exist_ok=True)
+        return company_dir
+        
     def try_download_with_viewer(self, url: str, use_headless: bool = False) -> Tuple[bool, Optional[str]]:
         """
         Attempt to download using Chrome browser. Headless mode is optional and disabled by default.
@@ -209,12 +243,16 @@ class SmartDownloader:
         try:
             print(f"Attempting to download using Chrome browser for: {url}")
             
+            # Get company-specific download directory
+            download_dir = self.get_company_download_dir(url)
+            print(f"Using company download directory: {download_dir}")
+            
             # Get initial files in download directory
-            files_before = set(os.listdir(self.download_dir))
+            files_before = set(os.listdir(download_dir))
             print(f"Files in download directory before: {len(files_before)}")
             
-            # Setup and initialize Chrome
-            driver = setup_chrome_driver(self.download_dir, use_headless)
+            # Setup and initialize Chrome with company-specific download directory
+            driver = setup_chrome_driver(download_dir, use_headless)
             driver.set_page_load_timeout(30)
             
             print("Chrome browser initialized successfully")
@@ -225,14 +263,14 @@ class SmartDownloader:
             print("Page loaded successfully")
             
             # Wait for download to complete
-            if wait_for_download(self.download_dir):
+            if wait_for_download(download_dir):
                 # Get new files
-                current_files = set(os.listdir(self.download_dir))
+                current_files = set(os.listdir(download_dir))
                 new_files = current_files - files_before
                 
                 if new_files:
                     new_file_path = os.path.join(
-                        self.download_dir,
+                        download_dir,
                         list(new_files)[0]
                     )
                     print(f"Successfully downloaded: {os.path.basename(new_file_path)}")
@@ -248,9 +286,8 @@ class SmartDownloader:
             if driver:
                 try:
                     driver.quit()
-                    print("Chrome browser closed successfully")
-                except Exception as e:
-                    print(f"Error closing Chrome browser: {str(e)}")
+                except:
+                    pass
 
     def _check_for_new_downloads(self) -> bool:
         """Check if any new files have been downloaded in the last 30 seconds."""
@@ -273,112 +310,75 @@ class SmartDownloader:
 
     def smart_download(self, url: str, use_headless: bool = False) -> Tuple[bool, List[str]]:
         """
-        Smartly handle both direct file downloads and webpage scraping.
-        Returns (success, list of downloaded files)
+        Attempt to download a file using various methods.
+        Returns (success, list of downloaded file paths).
         """
-        # Skip if URL is not from valid years
-        if not is_valid_year(url):
-            print(f"Skipping URL (not from years {VALID_YEARS}): {url}")
-            return True, []
-
-        # Skip if URL has already been processed
-        normalized_url = self.normalize_url(url)
-        if normalized_url in self.processed_urls:
+        if url in self.processed_urls:
             print(f"Skipping already processed URL: {url}")
             return True, []
-        
-        self.processed_urls.add(normalized_url)
+            
+        self.processed_urls.add(url)
         downloaded_files = []
-        skipped_files = []  # Track skipped files
         
         try:
-            # First check if it's a direct download link
-            is_direct_download = any(url.lower().endswith(ext) for ext in ['.pdf', '.xlsx', '.xls', '.csv'])
+            # Get company-specific download directory
+            download_dir = self.get_company_download_dir(url)
+            print(f"Using company download directory: {download_dir}")
             
-            if not is_direct_download:
-                is_downloadable, content_type = self.is_downloadable_file(url)
-                is_direct_download = is_downloadable
+            # First check if it's directly downloadable
+            is_downloadable, content_type = self.is_downloadable_file(url)
             
-            if is_direct_download:
-                print("Direct file download detected...")
-                filename = self.get_file_basename(url)
-                
-                if filename in self.downloaded_files:
-                    print(f"Skipping download: {filename} (already downloaded from another URL)")
-                    skipped_files.append(filename)
-                    return True, []
-                
-                print(f"Attempting to download: {url}")
-                
-                # Try download with Chrome first for direct files
-                success, result = self.try_download_with_viewer(url, use_headless)
-                
-                # If Chrome download fails, try normal download
-                if not success:
-                    print("Chrome download failed, trying direct download...")
-                    success, result = self.download_manager.download(url)
-                
-                if success:
-                    self.downloaded_files.add(os.path.basename(result))
-                    downloaded_files.append(result)
-                    print(f"Successfully downloaded: {os.path.basename(result)}")
-                    return True, downloaded_files
-                else:
-                    print(f"Failed to download: {url} (all download methods failed)")
-                    return False, []
-            
-            # If not a direct download, try to find download links in the page
-            print("Scanning webpage for downloadable files...")
-            download_links = self.extract_download_links(url)
-            
-            if not download_links:
-                # Try Chrome download as last resort
-                print("No downloadable links found, trying Chrome download...")
-                success, result = self.try_download_with_viewer(url, use_headless)
-                if success:
-                    self.downloaded_files.add(os.path.basename(result))
-                    downloaded_files.append(result)
+            if is_downloadable:
+                print(f"Direct download attempt for: {url}")
+                try:
+                    response = self.session.get(url, timeout=30)
+                    response.raise_for_status()
+                    
+                    # Get filename
+                    filename = self.get_file_basename(url, content_type)
+                    file_path = os.path.join(download_dir, filename)
+                    
+                    # Ensure unique filename
+                    base, ext = os.path.splitext(filename)
+                    counter = 1
+                    while os.path.exists(file_path):
+                        file_path = os.path.join(download_dir, f"{base}_{counter}{ext}")
+                        counter += 1
+                    
+                    # Save file
+                    with open(file_path, 'wb') as f:
+                        f.write(response.content)
+                    
+                    print(f"Successfully downloaded: {os.path.basename(file_path)}")
+                    downloaded_files.append(file_path)
                     return True, downloaded_files
                     
-                print("No downloadable files found in the webpage")
-                return False, []
+                except requests.RequestException as e:
+                    print(f"Direct download failed: {str(e)}")
+                    # Continue to try other methods
             
-            print(f"Found {len(download_links)} potential download links")
-            
-            # Download all found files
-            for link in download_links:
-                filename = self.get_file_basename(link)
-                if filename in self.downloaded_files:
-                    print(f"Skipping download: {filename} (already downloaded from another URL)")
-                    skipped_files.append(filename)
-                    continue
-                
-                print(f"Attempting to download: {link}")
-                # Try Chrome download first
-                success, result = self.try_download_with_viewer(link, use_headless)
-                
-                # If Chrome download fails, try normal download
-                if not success:
-                    print("Chrome download failed, trying direct download...")
-                    success, result = self.download_manager.download(link)
-                
-                if success:
-                    self.downloaded_files.add(os.path.basename(result))
-                    downloaded_files.append(result)
-                    print(f"Successfully downloaded: {os.path.basename(result)}")
-                else:
-                    print(f"Failed to download: {link} (all download methods failed)")
-            
-            if downloaded_files:
+            # If direct download failed or not possible, try browser download
+            success, file_path = self.try_download_with_viewer(url, use_headless)
+            if success and file_path:
+                downloaded_files.append(file_path)
                 return True, downloaded_files
-            elif skipped_files:
-                print(f"All files were already downloaded from other URLs ({', '.join(skipped_files)})")
-                return True, []
-            else:
-                return False, []
+            
+            # If still no success, try to find download links on the page
+            print("Attempting to find download links on the page...")
+            download_links = self.extract_download_links(url)
+            
+            if download_links:
+                print(f"Found {len(download_links)} potential download links")
+                for link in download_links[:10]:  # Limit to first 10 links
+                    if link not in self.processed_urls:
+                        success, files = self.smart_download(link, use_headless)
+                        if success:
+                            downloaded_files.extend(files)
+            
+            return len(downloaded_files) > 0, downloaded_files
             
         except Exception as e:
-            print(f"Error processing {url}: {str(e)}")
+            print(f"Error downloading {url}: {str(e)}")
             return False, downloaded_files
 
 def test_multiple_urls(urls: List[str], use_headless: bool = False):
