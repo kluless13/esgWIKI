@@ -20,8 +20,11 @@ python -m tests.test_main collect
 
 3. Run Test Downloader:
 ```bash
-# This will download files to tests/test_output/downloads/
+# Download all files to tests/test_output/downloads/
 python -m tests.test_downloader
+
+# Or limit to first 10 files per company
+python -m tests.test_downloader 10
 ```
 
 All test outputs will be stored in the `tests/test_output/` directory to keep test artifacts separate from production data.

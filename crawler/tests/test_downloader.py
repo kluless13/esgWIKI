@@ -13,6 +13,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
+import sys
 
 # Test configuration
 TEST_OUTPUT_DIR = os.path.join(os.path.dirname(__file__), 'test_output')
@@ -394,7 +395,7 @@ def test_multiple_urls(urls: List[str], use_headless: bool = False):
     
     # Process each URL
     for i, url in enumerate(urls, 1):
-        print(f"\nProcessing URL {i}/{len(urls)}")
+        print(f"\nProcessing batch URL {i}/{len(urls)}")
         print(f"URL: {url}")
         
         try:
@@ -419,64 +420,95 @@ def test_multiple_urls(urls: List[str], use_headless: bool = False):
         
         print("-" * 80)  # Separator between URLs
     
-    # Print summary
-    print("\nDownload Summary:")
-    print(f"Total URLs processed: {len(urls)}")
+    # Print batch summary
+    print("\nBatch Download Summary:")
+    print(f"URLs in this batch: {len(urls)}")
     print(f"New files downloaded: {len(results['successful'])}")
     print(f"URLs skipped (duplicates): {len(results['skipped'])}")
     print(f"Failed URLs: {len(results['failed'])}")
     
     if results['successful']:
-        print("\nSuccessfully downloaded new files:")
+        print("\nSuccessfully downloaded new files in this batch:")
         for file in results['successful']:
             print(f"  - {os.path.basename(file)}")
     
     if results['skipped']:
-        print("\nSkipped URLs (files already downloaded):")
+        print("\nSkipped URLs in this batch (files already downloaded):")
         for url in results['skipped']:
             print(f"  - {url}")
     
     if results['failed']:
-        print("\nFailed URLs (download failed):")
+        print("\nFailed URLs in this batch:")
         for url in results['failed']:
             print(f"  - {url}")
+    
+    return results
 
 def main():
-    # Test URLs for specific companies with a mix of direct and indirect URLs
-    test_urls = {
-        'BHP': [
-            # Direct PDF 2024
-            "https://www.bhp.com/-/media/documents/investors/annual-reports/2024/240827_bhpannualreport2024.pdf",
-            # Direct Excel 2024
-            "https://www.bhp.com/-/media/documents/investors/annual-reports/2024/240827_esgstandardsanddatabook2024.xlsx",
-            # Direct PDF 2023
-            "https://www.bhp.com/-/media/documents/investors/annual-reports/2023/230815_bhpannualreport2023.pdf"
-        ],
-        'CommBank': [
-            # Direct PDF 2024
-            "https://www.commbank.com.au/content/dam/commbank-assets/investors/docs/results/fy24/CBA-2024-Climate-Report.pdf",
-            # Direct PDF 2023
-            "https://www.commbank.com.au/content/dam/commbank-assets/investors/docs/results/fy23/CBA-2023-Annual-Report.pdf",
-            # Direct PDF 2022
-            "https://www.commbank.com.au/content/dam/commbank-assets/investors/docs/results/fy22/CBA-2022-Annual-Report.pdf"
-        ],
-        'NAB': [
-            # Direct PDF 2024
-            "https://www.nab.com.au/content/dam/nab/documents/reports/corporate/2024-climate-report.pdf",
-            # Direct Excel 2024
-            "https://www.nab.com.au/content/dam/nab/documents/reports/corporate/2024-sustainability-data-pack.xlsx",
-            # Direct PDF 2023
-            "https://www.nab.com.au/content/dam/nab/documents/reports/corporate/2023-annual-financial-report.pdf"
-        ]
-    }
+    # Check for limit argument
+    limit_per_company = None
+    if len(sys.argv) > 1:
+        try:
+            limit_per_company = int(sys.argv[1])
+            print(f"\nLimiting to {limit_per_company} files per company")
+        except ValueError:
+            print("Invalid limit argument. Please provide a number (e.g., 'python test_downloader.py 10')")
+            return
 
-    for company, urls in test_urls.items():
+    # Read URLs from report_link.txt
+    report_links_file = os.path.join(TEST_OUTPUT_DIR, 'report_link.txt')
+    if not os.path.exists(report_links_file):
+        print(f"Error: {report_links_file} not found!")
+        return
+
+    print(f"\nReading report links from {report_links_file}")
+    company_urls = {}  # Dictionary to store URLs by company
+    current_company = None
+    
+    # First pass: collect URLs by company
+    with open(report_links_file, 'r') as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            
+            # Check if this is a company header
+            if line.startswith('==='):
+                current_company = line.strip('= ')
+                company_urls[current_company] = []
+                print(f"\n{'='*80}")
+                print(f"Found {current_company}")
+                print(f"{'='*80}")
+                continue
+            
+            # Extract URL from the line (format: "type (year): url")
+            if current_company and ': ' in line:
+                parts = line.split(': ', 1)
+                if len(parts) == 2:
+                    url = parts[1].strip()
+                    company_urls[current_company].append(url)
+    
+    # Process URLs by company with optional limit
+    all_urls = []
+    for company, urls in company_urls.items():
         print(f"\n{'='*80}")
-        print(f"Testing {company} URLs:")
+        print(f"Processing {company}")
         print(f"{'='*80}")
         
-        # Test URLs for this company
-        test_multiple_urls(urls, use_headless=False)
+        # Apply limit if specified
+        company_urls_to_process = urls[:limit_per_company] if limit_per_company else urls
+        print(f"Processing {len(company_urls_to_process)} out of {len(urls)} URLs for this company")
+        all_urls.extend(company_urls_to_process)
+    
+    total_urls = len(all_urls)
+    print(f"\nTotal URLs to process: {total_urls}")
+    
+    # Process URLs in batches
+    batch_size = 10
+    for i in range(0, len(all_urls), batch_size):
+        batch = all_urls[i:i + batch_size]
+        print(f"\nProcessing URLs {i+1}-{min(i+batch_size, total_urls)} of {total_urls}")
+        test_multiple_urls(batch, use_headless=False)
 
 if __name__ == "__main__":
     try:
