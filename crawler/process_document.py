@@ -6,6 +6,7 @@ from utils.scraper_utils import get_llm_strategy
 from langchain_community.document_loaders import PyPDFLoader
 import logging
 import json
+import sys
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -179,18 +180,25 @@ def process_cba_report():
         logger.error("Failed to process CBA report")
 
 if __name__ == "__main__":
+    if len(sys.argv) != 4:
+        print("Usage: python process_document.py <pdf_file> <company_name> <company_code>")
+        sys.exit(1)
+        
+    file_path = sys.argv[1]
+    company_name = sys.argv[2]
+    company_code = sys.argv[3]
+    
     processor = DocumentProcessor()
-    file_path = "/Users/kluless/esgWIKI/crawler/tests/downloads/2024-climate-report.pdf"
     metrics = processor.process_pdf(
         file_path=file_path,
-        company_name="National Australia Bank",
-        company_code="NAB"
+        company_name=company_name,
+        company_code=company_code
     )
     
     if metrics:
-        print("Successfully processed NAB Climate Report")
+        print("Successfully processed document")
         print("Extracted metrics:")
         for key, value in metrics.items():
             print(f"{key}: {value}")
     else:
-        print("Failed to process NAB Climate Report") 
+        print("Failed to process document") 
