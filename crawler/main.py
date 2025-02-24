@@ -16,6 +16,17 @@ from utils.scraper_utils import get_browser_config, get_llm_strategy, ESGExtract
 
 load_dotenv()
 
+# Output directory configuration
+OUTPUT_DIR = os.path.join(os.path.dirname(__file__), 'output')
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+# Output file paths
+SUSTAINABILITY_DATA = os.path.join(OUTPUT_DIR, 'sustainability_data.json')
+SUSTAINABILITY_SUMMARY = os.path.join(OUTPUT_DIR, 'sustainability_summary.json')
+REPORT_LINKS = os.path.join(OUTPUT_DIR, 'report_link.txt')
+DOWNLOADS_DIR = os.path.join(OUTPUT_DIR, 'downloads')
+os.makedirs(DOWNLOADS_DIR, exist_ok=True)
+
 
 def convert_company_name_to_url(company_name: str) -> str:
     """
@@ -151,9 +162,9 @@ async def collect_report_links():
             await asyncio.sleep(1)  # Reduced delay between batches
 
     # Save results
-    with open("sustainability_data.json", "w") as f:
+    with open(SUSTAINABILITY_DATA, "w") as f:
         json.dump(report_data, f, indent=2)
-    print(f"\nCollected data for {len(report_data)} companies and saved to 'sustainability_data.json'")
+    print(f"\nCollected data for {len(report_data)} companies and saved to '{SUSTAINABILITY_DATA}'")
     
     # Create a summary of sustainability reports
     sustainability_summary = []
@@ -189,20 +200,22 @@ async def collect_report_links():
             sustainability_summary.append(summary)
     
     # Save sustainability summary
-    with open("sustainability_summary.json", "w") as f:
+    with open(SUSTAINABILITY_SUMMARY, "w") as f:
         json.dump(sustainability_summary, f, indent=2)
-    print(f"\nSaved sustainability summary for {len(sustainability_summary)} companies to 'sustainability_summary.json'")
+    print(f"\nSaved sustainability summary for {len(sustainability_summary)} companies to '{SUSTAINABILITY_SUMMARY}'")
     
     # Save report URLs to report_link.txt (only recent reports)
     report_count = 0
-    with open("report_link.txt", "w") as f:
+    with open(REPORT_LINKS, "w") as f:
         for company in report_data:
+            # Add company header
+            f.write(f"\n=== {company['company_name']} ===\n")
             for report in company['sustainability_reports']:
                 if report.get('year') in get_valid_years():
-                    f.write(f"{report['url']}\n")
+                    f.write(f"{report['type']} ({report['year']}): {report['url']}\n")
                     report_count += 1
     
-    print(f"Saved {report_count} recent sustainability report URLs to 'report_link.txt'")
+    print(f"Saved {report_count} recent sustainability report URLs to '{REPORT_LINKS}'")
 
 
 async def process_company(crawler, company_url, company_name):
@@ -711,10 +724,10 @@ async def crawl_reports_from_links():
     llm_strategy = get_llm_strategy()
     seen_companies = set()
     all_reports = []
-    if not os.path.exists("report_link.txt"):
+    if not os.path.exists(REPORT_LINKS):
         print("report_link.txt not found. Please run in 'collect' mode first.")
         return
-    with open("report_link.txt", "r") as f:
+    with open(REPORT_LINKS, "r") as f:
         links = [line.strip() for line in f if line.strip()]
     async with AsyncWebCrawler(config=browser_config) as crawler:
         for report_url in links:
@@ -732,7 +745,7 @@ async def analyze_sustainability_reports():
     """
     Analyzes sustainability reports from report_link.txt and creates a metrics CSV.
     """
-    if not os.path.exists("report_link.txt"):
+    if not os.path.exists(REPORT_LINKS):
         print("Error: report_link.txt not found! Please run 'collect' mode first.")
         return
         
@@ -740,7 +753,7 @@ async def analyze_sustainability_reports():
     browser_config = get_browser_config()
     llm_strategy = get_llm_strategy()
     
-    with open("report_link.txt", "r") as f:
+    with open(REPORT_LINKS, "r") as f:
         report_links = [line.strip() for line in f if line.strip()]
     
     print(f"\nAnalyzing {len(report_links)} sustainability reports...")
