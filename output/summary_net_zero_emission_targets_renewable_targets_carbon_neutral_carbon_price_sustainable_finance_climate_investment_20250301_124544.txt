@@ -1,0 +1,7 @@
+net_zero: Net zero across financed, facilitated emissions, and operations by 2050.
+emission_targets: Target to reduce Scope 1 and 2 GHG emissions by 72% against a 2022 baseline by 2030, and achieve net zero across financed and facilitated emissions, and operations by 2050.
+renewable_targets: Target to use 100% renewable electricity by 2025 with current sourcing at 95%.
+carbon_neutral: No relevant information found
+carbon_price: The carbon price range per tonne CO2-e from 2030 to 2050 varies from USD $37-USD $144 for portfolio modelling, USD $0.63-USD $497 for customer-level analysis, and USD $300 – USD $600 to induce changes due to physical risks.
+sustainable_finance: NAB has committed to an $80bn environmental finance ambition by 2030, with $7.3bn already allocated.
+climate_investment: No target found.

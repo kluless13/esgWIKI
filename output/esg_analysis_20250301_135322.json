@@ -1,0 +1,240 @@
+{
+  "company_name": "NAB",
+  "report_date": "2025-03-01",
+  "sections": {
+    "current_environmental_impact": {
+      "emissions": {
+        "scope1": {
+          "current": {
+            "metric_type": "scope1",
+            "year": "2024",
+            "value": 7313.0,
+            "unit": "tCO2-e",
+            "source_text": "Total scope 1: 7313.0 tCO2-e",
+            "source_type": "excel",
+            "confidence_score": 1.0,
+            "last_updated": "2025-03-01T13:53:22.564733"
+          },
+          "historical": {
+            "2022": {
+              "metric_type": "scope1",
+              "year": "2022",
+              "value": 6618.794675000003,
+              "unit": "tCO2-e",
+              "source_text": "Total scope 1: 6618.794675000003 tCO2-e",
+              "source_type": "excel",
+              "confidence_score": 1.0,
+              "last_updated": "2025-03-01T13:53:22.564735"
+            },
+            "2023": {
+              "metric_type": "scope1",
+              "year": "2023",
+              "value": 7589.836908999998,
+              "unit": "tCO2-e",
+              "source_text": "Total scope 1: 7589.836908999998 tCO2-e",
+              "source_type": "excel",
+              "confidence_score": 1.0,
+              "last_updated": "2025-03-01T13:53:22.564734"
+            },
+            "2024": {
+              "metric_type": "scope1",
+              "year": "2024",
+              "value": 7313.0,
+              "unit": "tCO2-e",
+              "source_text": "Total scope 1: 7313.0 tCO2-e",
+              "source_type": "excel",
+              "confidence_score": 1.0,
+              "last_updated": "2025-03-01T13:53:22.564733"
+            }
+          }
+        },
+        "scope2": {
+          "current": {
+            "metric_type": "scope2",
+            "year": "2024",
+            "value": 49565.0,
+            "unit": "tCO2-e",
+            "source_text": "Purchased energy: 49565.0 tCO2-e",
+            "source_type": "excel",
+            "confidence_score": 1.0,
+            "last_updated": "2025-03-01T13:53:22.564736"
+          },
+          "historical": {
+            "2022": {
+              "metric_type": "scope2",
+              "year": "2022",
+              "value": 69015.01186299999,
+              "unit": "tCO2-e",
+              "source_text": "Purchased energy: 69015.01186299999 tCO2-e",
+              "source_type": "excel",
+              "confidence_score": 1.0,
+              "last_updated": "2025-03-01T13:53:22.564737"
+            },
+            "2023": {
+              "metric_type": "scope2",
+              "year": "2023",
+              "value": 57319.80211000001,
+              "unit": "tCO2-e",
+              "source_text": "Purchased energy: 57319.80211000001 tCO2-e",
+              "source_type": "excel",
+              "confidence_score": 1.0,
+              "last_updated": "2025-03-01T13:53:22.564736"
+            },
+            "2024": {
+              "metric_type": "scope2",
+              "year": "2024",
+              "value": 49565.0,
+              "unit": "tCO2-e",
+              "source_text": "Purchased energy: 49565.0 tCO2-e",
+              "source_type": "excel",
+              "confidence_score": 1.0,
+              "last_updated": "2025-03-01T13:53:22.564736"
+            }
+          }
+        },
+        "scope3": {
+          "current": {
+            "metric_type": "scope3",
+            "year": "2024",
+            "value": 71840.0,
+            "unit": "tCO2-e",
+            "source_text": "Total scope 3: 71840.0 tCO2-e",
+            "source_type": "excel",
+            "confidence_score": 1.0,
+            "last_updated": "2025-03-01T13:53:22.564738"
+          },
+          "historical": {
+            "2022": {
+              "metric_type": "scope3",
+              "year": "2022",
+              "value": 43722.0,
+              "unit": "tCO2-e",
+              "source_text": "Total scope 3: 43722.0 tCO2-e",
+              "source_type": "excel",
+              "confidence_score": 1.0,
+              "last_updated": "2025-03-01T13:53:22.564739"
+            },
+            "2023": {
+              "metric_type": "scope3",
+              "year": "2023",
+              "value": 55028.0,
+              "unit": "tCO2-e",
+              "source_text": "Total scope 3: 55028.0 tCO2-e",
+              "source_type": "excel",
+              "confidence_score": 1.0,
+              "last_updated": "2025-03-01T13:53:22.564738"
+            },
+            "2024": {
+              "metric_type": "scope3",
+              "year": "2024",
+              "value": 71840.0,
+              "unit": "tCO2-e",
+              "source_text": "Total scope 3: 71840.0 tCO2-e",
+              "source_type": "excel",
+              "confidence_score": 1.0,
+              "last_updated": "2025-03-01T13:53:22.564738"
+            }
+          }
+        },
+        "total": {
+          "metric_type": "emissions",
+          "year": "2024",
+          "value": 128718.0,
+          "unit": "tCO2-e",
+          "source_text": "Gross GHG emissions (Scope 1, 2 and 3) prior to renewable energy purchase: 128718.0 tCO2-e",
+          "source_type": "excel",
+          "confidence_score": 1.0,
+          "last_updated": "2025-03-01T13:53:22.564740"
+        }
+      },
+      "energy": {
+        "consumption": {
+          "metric_type": "energy",
+          "year": "2024",
+          "value": null,
+          "unit": null,
+          "source_text": null,
+          "source_type": "excel",
+          "confidence_score": 1.0,
+          "last_updated": "2025-03-01T13:53:22.564726"
+        },
+        "renewable_percentage": {
+          "current": 95.0,
+          "target": 100.0,
+          "unit": "%"
+        }
+      }
+    },
+    "climate_commitments": {
+      "net_zero": {
+        "commitment": "Net zero across financed, facilitated emissions, and operations by 2050",
+        "target_year": null,
+        "scope": "All emissions (Scope 1, 2, and 3)"
+      },
+      "emission_targets": {
+        "short_term": "Target to reduce Scope 1 and 2 GHG emissions by 72% against a 2022 baseline by 2030",
+        "progress": {
+          "status": "Action needed",
+          "gap": 95298.6,
+          "required_annual_reduction": 19059.72,
+          "trend": 3.904453848988805,
+          "trend_assessment": "Worsening",
+          "progress_percentage": -285.1595181242033
+        }
+      },
+      "renewable_targets": {
+        "target": "Target to use 100% renewable electricity by 2025 with current sourcing at 95%.",
+        "progress": {
+          "status": "Target year has passed",
+          "gap": -5.0,
+          "trend": null
+        }
+      }
+    },
+    "progress_towards_goals": {
+      "emissions_reduction": {
+        "target": "72% reduction by 2030 (2022 baseline)",
+        "current_status": {
+          "status": "Action needed",
+          "gap": 95298.6,
+          "required_annual_reduction": 19059.72,
+          "trend": 3.904453848988805,
+          "trend_assessment": "Worsening",
+          "progress_percentage": -285.1595181242033
+        }
+      },
+      "renewable_energy": {
+        "target": "100% by 2025",
+        "current_status": {
+          "status": "Target year has passed",
+          "gap": -5.0,
+          "trend": null
+        }
+      },
+      "gaps_identified": [
+        "No carbon neutral certification status reported",
+        "No specific climate investment targets defined"
+      ],
+      "recommendations": [
+        "Consider pursuing carbon neutral certification to demonstrate commitment",
+        "Develop specific climate investment targets aligned with industry standards",
+        "Develop immediate action plan to reverse increasing emissions trend"
+      ]
+    },
+    "financial_commitment": {
+      "sustainable_finance": {
+        "target": "$80 billion by 2030",
+        "current": "$7.3B",
+        "progress": "9.1% ($7.3B of $80B target)"
+      },
+      "climate_investment": "No specific target found"
+    },
+    "carbon_management": {
+      "carbon_neutral_status": "Status not found",
+      "carbon_pricing": {
+        "internal_price_range": "USD $37-USD $144 (2030-2050) for portfolio modelling, USD $0.63-USD $497 for customer-level analysis, USD $300-USD $600 for physical risks",
+        "application": "Used for portfolio modeling and customer-level analysis"
+      }
+    }
+  }
+}

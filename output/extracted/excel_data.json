@@ -1,0 +1,122 @@
+{
+  "energy": {
+    "2024": {
+      "purchased_energy": {
+        "value": 49565.0,
+        "unit": "tCO2-e",
+        "source_text": "Purchased energy: 49565.0 tCO2-e"
+      },
+      "fuel_energy": {
+        "value": 6783.0,
+        "unit": "tCO2-e",
+        "source_text": "Category 3: Fuel and energy-related activities: 6783.0 tCO2-e"
+      }
+    },
+    "2023": {
+      "purchased_energy": {
+        "value": 57319.80211000001,
+        "unit": "tCO2-e",
+        "source_text": "Purchased energy: 57319.80211000001 tCO2-e"
+      },
+      "fuel_energy": {
+        "value": 6697.0,
+        "unit": "tCO2-e",
+        "source_text": "Category 3: Fuel and energy-related activities: 6697.0 tCO2-e"
+      }
+    },
+    "2022": {
+      "purchased_energy": {
+        "value": 69015.01186299999,
+        "unit": "tCO2-e",
+        "source_text": "Purchased energy: 69015.01186299999 tCO2-e"
+      },
+      "fuel_energy": {
+        "value": 8545.0,
+        "unit": "tCO2-e",
+        "source_text": "Category 3: Fuel and energy-related activities: 8545.0 tCO2-e"
+      }
+    }
+  },
+  "scope1": {
+    "2024": {
+      "value": 7313.0,
+      "unit": "tCO2-e",
+      "source_text": "Total scope 1: 7313.0 tCO2-e"
+    },
+    "2023": {
+      "value": 7589.836908999998,
+      "unit": "tCO2-e",
+      "source_text": "Total scope 1: 7589.836908999998 tCO2-e"
+    },
+    "2022": {
+      "value": 6618.794675000003,
+      "unit": "tCO2-e",
+      "source_text": "Total scope 1: 6618.794675000003 tCO2-e"
+    }
+  },
+  "scope2": {
+    "2024": {
+      "value": 49565.0,
+      "unit": "tCO2-e",
+      "source_text": "Purchased energy: 49565.0 tCO2-e"
+    },
+    "2023": {
+      "value": 57319.80211000001,
+      "unit": "tCO2-e",
+      "source_text": "Purchased energy: 57319.80211000001 tCO2-e"
+    },
+    "2022": {
+      "value": 69015.01186299999,
+      "unit": "tCO2-e",
+      "source_text": "Purchased energy: 69015.01186299999 tCO2-e"
+    }
+  },
+  "scope3": {
+    "2024": {
+      "value": 71840.0,
+      "unit": "tCO2-e",
+      "source_text": "Total scope 3: 71840.0 tCO2-e"
+    },
+    "2023": {
+      "value": 55028.0,
+      "unit": "tCO2-e",
+      "source_text": "Total scope 3: 55028.0 tCO2-e"
+    },
+    "2022": {
+      "value": 43722.0,
+      "unit": "tCO2-e",
+      "source_text": "Total scope 3: 43722.0 tCO2-e"
+    }
+  },
+  "renewable": {
+    "2022": {
+      "renewable_electricity": {
+        "value": 40997.0,
+        "unit": "MWh",
+        "source_text": "Renewable electricity purchased: 40997.0 MWh"
+      },
+      "carbon_offsets": {
+        "value": 78358.0,
+        "unit": "tCO2-e",
+        "source_text": "Carbon offsets retired: 78358.0 tCO2-e"
+      }
+    }
+  },
+  "emissions": {
+    "2024": {
+      "value": 128718.0,
+      "unit": "tCO2-e",
+      "source_text": "Gross GHG emissions (Scope 1, 2 and 3) prior to renewable energy purchase: 128718.0 tCO2-e"
+    },
+    "2023": {
+      "value": 119938.0,
+      "unit": "tCO2-e",
+      "source_text": "Gross GHG emissions (Scope 1, 2 and 3) prior to renewable energy purchase: 119938.0 tCO2-e"
+    },
+    "2022": {
+      "value": 119355.0,
+      "unit": "tCO2-e",
+      "source_text": "Gross GHG emissions (Scope 1, 2 and 3) prior to renewable energy purchase: 119355.0 tCO2-e"
+    }
+  }
+}

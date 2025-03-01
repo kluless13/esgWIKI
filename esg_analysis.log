@@ -1,0 +1,8 @@
+2025-03-01 13:51:53,361 - __main__ - INFO - Using Excel data: excel_all_metrics_20250301_124450.json
+2025-03-01 13:51:53,362 - __main__ - INFO - Using PDF summary: summary_renewable_targets_20250301_122929.txt
+2025-03-01 13:51:53,362 - __main__ - INFO - Initialized ESG Analyzer with excel data: output/excel_all_metrics_20250301_124450.json and PDF summary: output/summary_renewable_targets_20250301_122929.txt
+2025-03-01 13:51:53,363 - __main__ - ERROR - Error in main execution: 'ESGMetric' object has no attribute 'get'
+2025-03-01 13:53:22,563 - __main__ - INFO - Using Excel data: excel_all_metrics_20250301_124450.json
+2025-03-01 13:53:22,564 - __main__ - INFO - Using PDF summary: summary_renewable_targets_20250301_122929.txt
+2025-03-01 13:53:22,564 - __main__ - INFO - Initialized ESG Analyzer with excel data: output/excel_all_metrics_20250301_124450.json and PDF summary: output/summary_renewable_targets_20250301_122929.txt
+2025-03-01 13:53:22,565 - __main__ - INFO - Analysis results exported to: output/esg_analysis_20250301_135322.json
