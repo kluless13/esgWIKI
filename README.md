@@ -1,136 +1,79 @@
-# ASX ESG Data Collection and Analysis System
+## Running the Pipeline
 
-This repository combines two powerful components for ESG (Environmental, Social, and Governance) data analysis:
-
-1. **ASX Company Sustainability Crawler**: Automatically collects ESG reports and sustainability data from ASX-listed companies
-2. **ESG RAG System**: Analyzes the collected reports using DeepSeek's R1 model for intelligent querying and analysis
-
-## System Components
-
-### 1. ASX Sustainability Crawler
-
-Automatically crawls ASX-listed companies' websites to collect:
-
-**Sustainability Sections**:
-- Sustainability pages
-- ESG sections
-- Environmental pages
-- Climate-related sections
-
-**Report Types**:
-- Sustainability reports
-- ESG reports
-- Climate reports
-- Environmental reports
-- Carbon disclosure reports
-- Emissions reports
-
-### 2. ESG RAG System
-
-Processes and analyzes the collected reports using:
-- DeepSeek's R1 model for reasoning
-- Efficient document retrieval
-- Context-aware question-answering
-
-## Setup
-
-1. Clone the repository:
+### 1. Process Excel Data
 ```bash
-git clone https://github.com/kluless13/esgWIKI.git
-cd esgWIKI
+# Put your Excel file in input/excel/
+# Example: input/excel/2024-sustainability-data-pack.xlsx
+python excel.py --energy --scope1 --scope2 --scope3 --renewable --emissions --debug
+
+# This will create: output/extracted/excel_data.json
 ```
 
-2. Install dependencies:
+### 2. Process PDF Reports
 ```bash
-pip install -r requirements.txt
+# Put your PDF files in input/pdf/
+# Example: input/pdf/nab-climate-report.pdf
+
+# Extract all metrics (recommended)
+python pdf_extract.py --debug
+
+# Or extract specific metrics:
+python pdf_extract.py --metric net_zero
+python pdf_extract.py --metric emission_targets
+python pdf_extract.py --metric renewable_targets
+python pdf_extract.py --metric carbon_neutral
+python pdf_extract.py --metric carbon_price
+python pdf_extract.py --metric sustainable_finance
+python pdf_extract.py --metric climate_investment
+
+# Specify a different PDF file:
+python pdf_extract.py --file input/pdf/custom_report.pdf
+
+# This will create: output/extracted/pdf_data.json
 ```
 
-3. Set up environment variables:
+Available metrics:
+- `net_zero`: Net zero commitment year and interim targets
+- `emission_targets`: Emission reduction targets and base years
+- `renewable_targets`: Renewable energy targets and current percentage
+- `carbon_neutral`: Carbon neutral certification status
+- `carbon_price`: Internal carbon price used for decision making
+- `sustainable_finance`: Sustainable finance commitments and progress
+- `climate_investment`: Climate-related investments and initiatives
+
+### 3. Analyze ESG Data
 ```bash
-cp .env.example .env
-# Add required API keys:
-# - GROQ_API_KEY for PDF extraction
-# - HUGGINGFACE_API_TOKEN for RAG system
+# Uses the extracted data from steps 1 and 2
+python esg_analyzer.py --excel output/extracted/excel_data.json --pdf output/extracted/pdf_data.json --debug
+
+# This will create: output/analyzed/esg_analysis_[timestamp].json
 ```
 
-4. Prepare your `companies-list.csv` file with:
-   - `Link`: ListCorp URL for each company
-   - `Company Name`: Company name
-
-## Usage
-
-### 1. Data Collection
-
-Collect sustainability reports:
+### 4. Generate Report
 ```bash
-python main.py collect  # Gathers report links
-python main.py crawl    # Processes and extracts data from PDFs
+# Uses the analyzed data from step 3
+python ai_report_generator.py --input output/analyzed/esg_analysis_[timestamp].json
+
+# This will create: output/reports/esg_report_[timestamp].md
 ```
-
-### 2. Data Analysis
-
-Process and analyze the reports:
-```bash
-# Ingest collected PDFs into the vector database
-python ingest_pdfs.py
-
-# Start the RAG analysis system
-python r1_smolagent_rag.py
-```
-
-## Output Files
-
-### Crawler Outputs
-1. `sustainability_data.json` - Detailed company ESG data
-2. `sustainability_summary.json` - High-level ESG reporting summary
-3. `report_link.txt` - List of all sustainability report URLs
-
-### RAG System Outputs
-- Processed documents in `chroma_db`
-- Interactive analysis through Gradio interface
 
 ## File Structure
-
 ```
-├── Crawler Components
-│   ├── main.py              # Main crawler script
-│   ├── config.py            # Crawler configuration
-│   └── utils/
-│       └── scraper_utils.py # Browser configuration
-│
-├── RAG Components
-│   ├── ingest_pdfs.py       # PDF ingestion script
-│   ├── r1_smolagent_rag.py  # RAG system
-│   └── streamlit.py         # Web interface
-│
-├── data/                    # Collected PDFs
-├── chroma_db/              # Vector database
-├── requirements.txt        # Dependencies
-└── .env.example           # Environment variables template
+input/
+  ├── excel/
+  │   └── 2024-sustainability-data-pack.xlsx  # Put your Excel files here
+  └── pdf/
+      └── nab-climate-report.pdf  # Put your PDF files here
+
+output/
+  ├── extracted/
+  │   ├── excel_data.json          # Created by excel.py
+  │   └── pdf_data.json           # Created by pdf_extract.py
+  ├── analyzed/
+  │   └── esg_analysis_*.json    # Created by esg_analyzer.py
+  └── reports/
+      └── esg_report_*.md       # Created by ai_report_generator.py
 ```
 
-## How It Works
-
-1. **Data Collection Phase**:
-   - Crawler reads company URLs from `companies-list.csv`
-   - Finds and downloads sustainability reports
-   - Catalogs metadata (report type, year, source)
-
-2. **Analysis Phase**:
-   - RAG system ingests collected PDFs
-   - Creates embeddings using sentence-transformers
-   - Enables intelligent querying of ESG data
-
-## Technical Notes
-
-- Crawler uses 120-second timeout for reliable data collection
-- RAG system uses chunking (1000 chars, 200 char overlap)
-- Automatic deduplication of reports
-- Efficient vector storage and retrieval
-
-## Requirements
-
-- Python 3.8+
-- GROQ API key (PDF extraction)
-- HuggingFace API token (RAG system)
-- Sufficient storage for PDFs and vector database
+TODO:
+- Generalise scripts for different companies
